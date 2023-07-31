@@ -1,0 +1,6 @@
+.headerContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 75vw;
+}

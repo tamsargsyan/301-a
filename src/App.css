@@ -1,0 +1,29 @@
+:root {
+    --main-color: #DD264E;
+    --text-color: #313A4B;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+h1 {
+    margin: 0;
+}
+.separatedPart {
+    height: 50px;
+    width: 100%;
+}

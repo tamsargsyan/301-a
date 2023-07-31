@@ -1,0 +1,142 @@
+import Background from "../Background";
+import Header from "../Header";
+import SIDE_PATTERN_2 from "../../assets/patterns/side-2.svg";
+import SMALL_PATTERN_1 from "../../assets/patterns/small-1.svg";
+import ICON from "../../assets/info/4.svg";
+import ARROW from "../../assets/arrow.svg";
+import FLAG from "../../assets/flag.svg";
+import "./index.css";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import Button from "../Button";
+
+const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      name: "Имя проекта",
+      culture: "Культура",
+      author: "Виктор Браун",
+      flag: 5,
+    },
+    {
+      id: 2,
+      name: "Имя проекта",
+      culture: "Культура",
+      author: "Виктор Браун",
+      flag: 5,
+    },
+    {
+      id: 3,
+      name: "Имя проекта",
+      culture: "Культура",
+      author: "Виктор Браун",
+      flag: 5,
+    },
+    {
+      id: 4,
+      name: "Имя проекта",
+      culture: "Культура",
+      author: "Виктор Браун",
+      flag: 5,
+    },
+    {
+      id: 5,
+      name: "Имя проекта",
+      culture: "Культура",
+      author: "Виктор Браун",
+      flag: 5,
+    },
+    // {
+    //   id: 6,
+    //   name: "Имя проекта",
+    //   culture: "Культура",
+    //   author: "Виктор Браун",
+    //   flag: 5,
+    // },
+    // {
+    //   id: 7,
+    //   name: "Имя проекта",
+    //   culture: "Культура",
+    //   author: "Виктор Браун",
+    //   flag: 5,
+    // },
+  ];
+  const [width, setWidth] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carousel = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    carousel.current &&
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  }, []);
+
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prevIndex => prevIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < projects.length - 1) {
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }
+  };
+
+  return (
+    <Background pattern1={SIDE_PATTERN_2} pattern2={SMALL_PATTERN_1}>
+      <div className='projectsContainer'>
+        <Header
+          h1='НАШИ ПРОЕКТЫ'
+          p='За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. '
+          btn={undefined}
+          icon={ICON}
+        />
+        <div className='slider'>
+          <button className='leftBtn' onClick={handleBack}>
+            <img src={ARROW} alt='Arrow' />
+          </button>
+          <button className='rightBtn' onClick={handleNext}>
+            <img src={ARROW} alt='Arrow' />
+          </button>
+          <motion.div ref={carousel} className='carousel'>
+            <motion.div
+              className='innerCarousel'
+              drag='x'
+              dragConstraints={{ right: 0, left: -width }}
+              initial={{ x: 0 }}
+              animate={{
+                x: -width * currentIndex,
+              }}>
+              {projects.map(project => {
+                return (
+                  <motion.div className='project' key={project.id}>
+                    <div className='projectImg'></div>
+                    <div className='projectInfo'>
+                      <h1>{project.name}</h1>
+                      <span>{project.culture}</span>
+                      <div className='author'>
+                        <span>{project.author}</span>
+                        <span className='flag'>
+                          <img src={FLAG} alt='Flag' />
+                          {project.flag}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </motion.div>
+        </div>
+        <Button
+          text='Другие проекты'
+          active={true}
+          style={{ padding: "10px 70px" }}
+        />
+      </div>
+    </Background>
+  );
+};
+
+export default Projects;
