@@ -1,14 +1,15 @@
 .btn {
-    padding: 10px 20px;
-    border-radius: 46px;
-    border: 2px solid var(--main-color);
-    display: block;
-    width: fit-content;
-    transition: 0.3s ease;
+  padding: 7px 40px;
+  border-radius: 46px;
+  border: 2px solid var(--main-color);
+  display: block;
+  width: fit-content;
+  transition: 0.3s ease;
+  font-weight: 700;
 }
 .activeBtn {
-    background-color: var(--main-color) !important;
-    color: #fff !important;
-    transform: translateX(20px);
-    box-shadow: -21px 13px 29px rgba(221, 38, 78, 0.35);
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+  transform: translateX(20px);
+  box-shadow: -21px 13px 29px rgba(221, 38, 78, 0.35);
 }

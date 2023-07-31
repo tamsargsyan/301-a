@@ -78,7 +78,7 @@ const Projects = () => {
   };
 
   const handleNext = () => {
-    if (currentIndex < projects.length - 1) {
+    if (currentIndex < 1) {
       setCurrentIndex(prevIndex => prevIndex + 1);
     }
   };
