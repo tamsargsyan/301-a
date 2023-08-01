@@ -1,6 +1,7 @@
 .news {
   width: 20vw;
   border-radius: 46px;
+  background-color: #fff;
   box-shadow: -15px 6px 28px rgba(34, 43, 60, 0.12);
 }
 .newsImg {
@@ -35,6 +36,9 @@
   font-size: clamp(1rem, 0rem + 0.8333vw, 3rem);
   font-style: normal;
   font-weight: 500;
+}
+.newsBtn {
+  display: none;
 }
 @media screen and (max-width: 1920px) {
   .newsContent h1 {
@@ -80,5 +84,62 @@
   }
   .newsContent p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 975px) {
+  .newsContainer {
+    flex-direction: column;
+    position: relative;
+    padding: 200px 0;
+    padding-top: 300px;
+  }
+  .newsContent {
+    padding: 10px;
+  }
+  .newsContent h1 {
+    font-size: 12px;
+  }
+  .newsContent p {
+    font-size: 10px;
+  }
+  .news {
+    width: 50vw;
+    height: 360px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    scale: 0.85;
+    transition: 0.3s ease;
+  }
+  .news:first-child,
+  .activeNews1 {
+    transform: translate(-110%, -58%);
+  }
+  .news:nth-child(2) {
+    z-index: 3;
+  }
+  .news:last-child,
+  .activeNews2 {
+    transform: translate(-5%, -58%);
+  }
+  .newsBtn {
+    display: block;
+    z-index: 9999;
+  }
+  .newsBtn.leftBtn {
+    left: 10px;
+  }
+  .newsBtn.rightBtn {
+    right: 10px;
+  }
+  .newsImg {
+    height: 145px;
+  }
+  .activeNews {
+    scale: 1;
+    z-index: 4;
+    transform: translate(-50%, -50%) !important;
   }
 }

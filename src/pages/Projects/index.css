@@ -15,6 +15,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .slider {
@@ -29,7 +31,7 @@
 }
 
 .project {
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   box-shadow: -15px 6px 28px rgba(34, 43, 60, 0.12);
   width: 33%;
 }
@@ -81,4 +83,36 @@
 
 .rightBtn:active {
   transform: translateY(-50%) scale(0.85) rotate(180deg);
+}
+@media screen and (max-width: 975px) {
+  .leftBtn,
+  .rightBtn {
+    display: none;
+  }
+  .carousel {
+    overflow: auto;
+  }
+  .innerCarousel {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .project {
+    width: fit-content;
+  }
+  .projectInfo h1 {
+    font-size: 14px;
+  }
+  .projectInfo span {
+    font-size: 12px;
+  }
+  .author {
+    font-size: 10px;
+  }
+  .projectInfo {
+    padding: 5px;
+  }
+  .projectImg {
+    width: 130px;
+    height: 70px;
+  }
 }

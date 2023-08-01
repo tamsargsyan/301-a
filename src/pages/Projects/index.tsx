@@ -130,11 +130,13 @@ const Projects = () => {
             </motion.div>
           </motion.div>
         </div>
-        <Button
-          text='Другие проекты'
-          active={true}
-          style={{ padding: "10px 70px" }}
-        />
+        <div className='btns'>
+          <Button
+            text='Другие проекты'
+            active={true}
+            style={{ padding: "10px 70px" }}
+          />
+        </div>
       </div>
     </Background>
   );

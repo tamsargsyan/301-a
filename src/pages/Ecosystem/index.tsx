@@ -35,7 +35,7 @@ const Ecosystem = () => {
       btn: ["Узнать больше"],
       btnStyle: [
         {
-          padding: "10px 30px",
+          padding: "15px 30px",
         },
       ],
     },
@@ -52,13 +52,13 @@ const Ecosystem = () => {
         {
           background: "#189387",
           color: "#fff",
-          padding: "10px 30px",
+          padding: "15px 30px",
           boxShadow: "-21px 16px 38px 0px rgba(24, 147, 135, 0.38)",
           border: "none",
         },
         {
           border: "1px solid #189387",
-          padding: "10px 30px",
+          padding: "15px 30px",
           boxShadow: "-21px 16px 38px 0px rgba(197, 217, 45, 0.29)",
         },
       ],
@@ -76,7 +76,7 @@ const Ecosystem = () => {
         {
           background: "#EE8842",
           color: "#fff",
-          padding: "10px 30px",
+          padding: "15px 30px",
           border: "none",
           boxShadow: " -21px 16px 38px 0px rgba(238, 136, 66, 0.42)",
         },
@@ -96,7 +96,7 @@ const Ecosystem = () => {
           background: "#C5D92D",
           border: "none",
           color: "#fff",
-          padding: "10px 30px",
+          padding: "15px 30px",
           boxShadow: "-21px 16px 38px 0px rgba(197, 217, 45, 0.29)",
         },
       ],
@@ -114,7 +114,7 @@ const Ecosystem = () => {
         {
           background: " #42CFEE",
           border: "none",
-          padding: "10px 30px",
+          padding: "15px 30px",
           color: "#fff",
           boxShadow: "-21px 16px 38px 0px rgba(66, 207, 238, 0.36)",
         },
@@ -133,13 +133,13 @@ const Ecosystem = () => {
         {
           background: "#C12DD9",
           color: "#fff",
-          padding: "10px 30px",
+          padding: "15px 30px",
           border: "none",
           boxShadow: "-21px 16px 38px 0px rgba(193, 45, 217, 0.32)",
         },
         {
           border: "1px solid #C12DD9",
-          padding: "10px 30px",
+          padding: "15px 30px",
           boxShadow: "-21px 16px 38px 0px rgba(197, 217, 45, 0.29)",
         },
       ],
@@ -159,16 +159,6 @@ const Ecosystem = () => {
           name: "Digitain",
           img: DIGITAIN,
         },
-        // {
-        //   id: 4,
-        //   name: "Ucom",
-        //   img: UCOM,
-        // },
-        // {
-        //   id: 5,
-        //   name: "Viva",
-        //   img: VIVA,
-        // },
       ],
     },
     {
@@ -184,7 +174,7 @@ const Ecosystem = () => {
       btnStyle: [
         {
           background: "#6442EE",
-          padding: "10px 30px",
+          padding: "15px 30px",
           border: "none",
           color: "#fff",
           boxShadow: "-21px 16px 38px 0px rgba(100, 66, 238, 0.37)",

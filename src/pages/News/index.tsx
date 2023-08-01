@@ -6,8 +6,11 @@ import PATTERN from "../../assets/patterns/side-3.svg";
 import NEWS_1 from "../../assets/news1.png";
 import NEWS_2 from "../../assets/news2.png";
 import NEWS_3 from "../../assets/news3.jpg";
+import ARROW from "../../assets/arrow.svg";
 import "./index.css";
 import Button from "../../components/Button";
+import { useState } from "react";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const News = () => {
   const news = [
@@ -36,6 +39,15 @@ const News = () => {
       img: NEWS_3,
     },
   ];
+  const [activeNews, setActiveNews] = useState(2);
+  const handleBack = () => {
+    activeNews > 1 && setActiveNews(prevIndex => prevIndex - 1);
+  };
+
+  const handleNext = () => {
+    activeNews < 3 && setActiveNews(prevIndex => prevIndex + 1);
+  };
+  const windowSize = useWindowSize();
   return (
     <Background
       pattern1={SIDE_PATTERN}
@@ -51,9 +63,19 @@ const News = () => {
           paddingBottom: "40px",
         }}
       />
+      <button className='leftBtn newsBtn' onClick={handleBack}>
+        <img src={ARROW} alt='Arrow' />
+      </button>
+      <button className='rightBtn newsBtn' onClick={handleNext}>
+        <img src={ARROW} alt='Arrow' />
+      </button>
       <div className='newsContainer'>
         {news.map(item => (
-          <div className='news' key={item.id}>
+          <div
+            className={`${activeNews === item.id && "activeNews"} ${
+              activeNews === 1 && item.id === 2 && "activeNews1"
+            } ${activeNews === 3 && item.id === 2 && "activeNews2"} news`}
+            key={item.id}>
             <div className='newsImg'>
               <img src={item.img} alt={item.title} />
             </div>
@@ -65,14 +87,19 @@ const News = () => {
           </div>
         ))}
       </div>
-      <Button
-        text='Все новости'
-        style={{
-          color: "#DD264E",
-          boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
-          margin: "50px 0",
-        }}
-      />
+      <div
+        className='btns'
+        style={{ margin: 0, padding: "0 20px", marginBottom: "40px" }}>
+        <Button
+          text='Все новости'
+          style={{
+            color: "#DD264E",
+            boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
+            margin: windowSize.width < 975 ? 0 : "50px 0",
+            padding: "15px 30px",
+          }}
+        />
+      </div>
     </Background>
   );
 };

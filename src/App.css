@@ -38,7 +38,11 @@ h2 {
   .btns {
     flex-direction: column;
   }
-  .btns, .btn {
+  .btns,
+  .btn {
     width: 100% !important;
+  }
+  .App {
+    min-height: auto;
   }
 }
