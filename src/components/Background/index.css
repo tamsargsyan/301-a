@@ -58,6 +58,12 @@
   bottom: 0;
   transform: rotate(180deg);
 }
+
+.onlyPattern1 {
+  width: 190px;
+  height: 190px;
+  top: 350px;
+}
 @media screen and (max-width: 975px) {
   .sidePattern1 {
     z-index: 3;

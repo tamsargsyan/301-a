@@ -1,5 +1,5 @@
-import Background from "../Background";
-import Header from "../Header";
+import Background from "../../components/Background";
+import Header from "../../components/Header";
 import SIDE_PATTERN_2 from "../../assets/patterns/side-2.svg";
 import SMALL_PATTERN_1 from "../../assets/patterns/small-1.svg";
 import ICON from "../../assets/info/4.svg";
@@ -8,7 +8,7 @@ import FLAG from "../../assets/flag.svg";
 import "./index.css";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Button from "../Button";
+import Button from "../../components/Button";
 
 const Projects = () => {
   const projects = [
@@ -89,7 +89,6 @@ const Projects = () => {
         <Header
           h1='НАШИ ПРОЕКТЫ'
           p='За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. '
-          btn={undefined}
           icon={ICON}
         />
         <div className='slider'>

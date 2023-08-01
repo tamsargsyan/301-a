@@ -1,17 +1,18 @@
-import './App.css';
-import Background from './components/Background';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import SIDE_PATTERN_2 from "./assets/patterns/side-2.svg"
-import SMALL_PATTERN_2 from "./assets/patterns/small-2.svg"
-import BIG_PATTERN_2 from "./assets/patterns/big-2.svg"
-import BIG_PATTERN_3 from "./assets/patterns/big-3.svg"
-import ICON_1 from "./assets/info/1.svg"
-import ICON_2 from "./assets/info/2.svg"
-import ICON_3 from "./assets/info/3.svg"
-import About from './components/About';
-import Projects from './components/Projects';
-
+import "./App.css";
+import Background from "./components/Background";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import SIDE_PATTERN_2 from "./assets/patterns/side-2.svg";
+import SMALL_PATTERN_2 from "./assets/patterns/small-2.svg";
+import BIG_PATTERN_2 from "./assets/patterns/big-2.svg";
+import BIG_PATTERN_3 from "./assets/patterns/big-3.svg";
+import ICON_1 from "./assets/info/1.svg";
+import ICON_2 from "./assets/info/2.svg";
+import ICON_3 from "./assets/info/3.svg";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Ecosystem from "./pages/Ecosystem";
+import News from "./pages/News";
 
 function App() {
   const sections = [
@@ -20,11 +21,11 @@ function App() {
       h1: "НАША МИССИЯ",
       h2: "Наша миссия — обеспечить онтологическую безопасность Армении.",
       p: "Мы запускаем научные проекты, реализовываем культурные инициативы, строим образовательную среду, формируем экспертное сообщество  — это актуализирует систему привычных ценностей и позволяет менять сценарий будущего. Мы верим, что именно такой подход сможет укрепить место армян как носителей уникального  культурного кода в современном мире. Мы выстраиваем те границы Армении, которые никому не под силу нарушить. Мы создаем будущее, в котором армянская цивилизация  уникальна и ценна для мира.",
-      btn: "Узнать больше",
+      btn: ["Узнать больше"],
       icon: ICON_1,
       pattern1: SIDE_PATTERN_2,
       pattern2: SMALL_PATTERN_2,
-      pattern3: BIG_PATTERN_2
+      pattern3: BIG_PATTERN_2,
     },
     {
       id: 2,
@@ -35,7 +36,7 @@ function App() {
       icon: ICON_2,
       pattern1: SIDE_PATTERN_2,
       pattern2: SMALL_PATTERN_2,
-      pattern3: BIG_PATTERN_3
+      pattern3: BIG_PATTERN_3,
     },
     {
       id: 3,
@@ -46,24 +47,32 @@ function App() {
       icon: ICON_3,
       pattern1: undefined,
       pattern2: undefined,
-      pattern3: undefined
+      pattern3: undefined,
     },
-  ]
+  ];
   return (
-    <div className="App">
+    <div className='App'>
       <Navbar />
-      {
-        sections.map(section => (
-          <div key={section.id}>
-            <Background pattern1={section.pattern1} pattern2={section.pattern2} pattern3={section.pattern3}>
-              <Header h1={section.h1} p={section.p} btn={section.btn} icon={section.icon} />
-            </Background>
-            <div className='separatedPart'></div>
-          </div>
-        ))
-      }
+      {sections.map(section => (
+        <div key={section.id}>
+          <Background
+            pattern1={section.pattern1}
+            pattern2={section.pattern2}
+            pattern3={section.pattern3}>
+            <Header
+              h1={section.h1}
+              p={section.p}
+              btns={section.btn}
+              icon={section.icon}
+            />
+          </Background>
+          <div className='separatedPart'></div>
+        </div>
+      ))}
       <About />
       <Projects />
+      <Ecosystem />
+      <News />
     </div>
   );
 }
