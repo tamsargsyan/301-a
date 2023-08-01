@@ -31,7 +31,6 @@
 
 .bigPattern {
   width: 24vw;
-  /* height: 600px; */
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -49,7 +48,10 @@
   position: absolute;
   left: 0;
 }
-
+.sidePattern1 img,
+.sidePattern2 img {
+  width: 100%;
+}
 .sidePattern1 {
   top: 0;
 }
@@ -67,5 +69,12 @@
 @media screen and (max-width: 975px) {
   .sidePattern1 {
     z-index: 3;
+  }
+  .pattern1,
+  .pattern2 {
+    display: none !important;
+  }
+  .bigPattern {
+    width: 65vw;
   }
 }

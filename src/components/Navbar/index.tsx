@@ -39,6 +39,12 @@ const Navbar = () => {
   ];
   const windowSize = useWindowSize();
   const [openMenu, setOpenMenu] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className='navbarContainer'>
       {windowSize.width < 975 && (
@@ -56,8 +62,9 @@ const Navbar = () => {
                 <div className='link'>
                   {menu.map((link, i) => (
                     <a
+                      onClick={e => e.preventDefault()}
                       key={i}
-                      href={link.link}
+                      href='#projects'
                       style={{ animationDelay: `${i * 0.1}s` }}>
                       {link.name}
                     </a>
@@ -76,14 +83,14 @@ const Navbar = () => {
           <span>Меню</span>
         </div>
       ) : (
-        <div className='logo'>
+        <button className='logo' onClick={scrollToTop}>
           <img src={LOGO} alt='Logo' />
-        </div>
+        </button>
       )}
       <div className='menu'>
         <div className='link'>
           {menu.map((link, i) => (
-            <a key={i} href={link.link}>
+            <a key={i} href='#projects'>
               {link.name}
             </a>
           ))}

@@ -41,7 +41,7 @@ const News = () => {
       pattern1={SIDE_PATTERN}
       pattern2={PATTERN}
       pattern2None={true}
-      style={{ flexDirection: "column" }}>
+      style={{ flexDirection: "column", paddingTop: 0 }}>
       <Header
         h1='Новости "301"'
         icon={HeaderIcon}

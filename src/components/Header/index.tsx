@@ -1,14 +1,16 @@
+import { useWindowSize } from "../../hooks/useWindowSize";
 import Button from "../Button";
 import "./index.css";
 
 interface HeaderProps {
   h1: string;
   h2?: string;
-  p?: string;
+  p?: string[];
   btns?: string[];
   style?: Object;
   btnStyles?: React.CSSProperties[];
   icon: string;
+  mainImg?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -19,19 +21,40 @@ const Header: React.FC<HeaderProps> = ({
   icon,
   style,
   btnStyles,
+  mainImg,
 }) => {
+  const windowSize = useWindowSize();
   return (
     <div className='headerContainer' style={style}>
-      <div className='icon'>
-        <img src={icon} alt='Icon' />
-      </div>
-      <div className='headerContent'>
-        <div className='header'>
-          <h1>{h1}</h1>
-          {h2 && <h2>{h2}</h2>}
+      {windowSize.width < 975 ? (
+        <div className={`${!mainImg && "iconTitleStart"} iconTitle`}>
+          <img src={icon} alt='Icon' />
+          <div className='header'>
+            <h1>{h1}</h1>
+            {h2 && <h2>{h2}</h2>}
+          </div>
         </div>
+      ) : (
+        <div className='icon'>
+          <img src={icon} alt='Icon' />
+        </div>
+      )}
+      <div className='headerContent'>
+        {windowSize.width > 975 && (
+          <div className='header'>
+            <h1>{h1}</h1>
+            {h2 && <h2>{h2}</h2>}
+          </div>
+        )}
+        {windowSize.width < 975 && mainImg && (
+          <div className='mainImgHeader'>
+            <img src={mainImg} alt='Main' />
+          </div>
+        )}
         <div className='inner'>
-          <p>{p}</p>
+          {p?.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
         {btns && (
           <div className='btns'>
