@@ -62,4 +62,7 @@
     width: 28vw;
     height: 80px;
   }
+  .ecosystemInner .inner {
+    width: 100%;
+  }
 }
