@@ -56,7 +56,7 @@ const News = () => {
       pattern2LeftStyle={{
         width: "190px",
         height: "190px",
-        top: "290px",
+        top: "350px",
       }}
       pattern2RightStyle={{
         display: "none",

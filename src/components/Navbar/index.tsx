@@ -49,10 +49,7 @@ const Navbar = () => {
     });
   };
   useEffect(() => {
-    // Add or remove the 'no-scroll' class to 'body' based on 'openMenu' state
     document.body.classList.toggle("no-scroll", openMenu);
-
-    // Cleanup: Remove the class when the component unmounts
     return () => {
       document.body.classList.remove("no-scroll");
     };

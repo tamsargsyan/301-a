@@ -1,24 +1,36 @@
+import React, { useState } from "react";
 import Background from "../../components/Background";
 import Header from "../../components/Header";
 import EMAIL from "../../assets/email.svg";
 import "./index.css";
-import { useState } from "react";
 import Button from "../../components/Button";
 import PATTERN_2 from "../../assets/patterns/small-3.svg";
 
 const Contact = () => {
-  const [value, setValue] = useState("");
-  const handleChange = (txt: string) => {
-    setValue(txt);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event: { target: { name: string; value: string } }) => {
+    const { name, value } = event.target;
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      [name]: value,
+    }));
   };
+
+  const handleSubmit = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+  };
+  console.log("Form Data:", formData);
 
   return (
     <Background
       style={{ flexDirection: "column", paddingTop: 0 }}
       pattern2={PATTERN_2}
-      pattern2LeftStyle={{
-        display: "none",
-      }}
+      pattern2LeftStyle={{ display: "none" }}
       pattern2RightStyle={{
         width: "190px",
         height: "190px",
@@ -33,7 +45,7 @@ const Contact = () => {
           paddingBottom: "40px",
         }}
       />
-      <form className='formContainer'>
+      <form className='formContainer' onSubmit={handleSubmit}>
         <div className='formInner'>
           <div className='formInputs'>
             <div className='formGroup'>
@@ -42,9 +54,9 @@ const Contact = () => {
                 type='text'
                 name='name'
                 id='name'
-                placeholder='Ваша имя'
-                value={value}
-                onChange={e => handleChange(e.target.value)}
+                placeholder='Ваше имя'
+                value={formData.name}
+                onChange={handleChange}
                 required
                 aria-hidden={true}
                 className='form'
@@ -57,8 +69,8 @@ const Contact = () => {
                 name='email'
                 id='email'
                 placeholder='Ваша почта'
-                value={value}
-                onChange={e => handleChange(e.target.value)}
+                value={formData.email}
+                onChange={handleChange}
                 required
                 aria-hidden={true}
                 className='form'
@@ -69,9 +81,12 @@ const Contact = () => {
             <label htmlFor='message'>Сообщение</label>
             <textarea
               id='message'
-              placeholder='Написать '
+              name='message'
+              placeholder='Написать'
               rows={4}
               cols={80}
+              value={formData.message}
+              onChange={handleChange}
               className='form'
             />
           </div>

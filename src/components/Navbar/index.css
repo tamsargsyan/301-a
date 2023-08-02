@@ -39,6 +39,9 @@
   font-size: 12px;
 }
 @media screen and (max-width: 975px) {
+  /* body.no-scroll {
+    overflow: hidden;
+  } */
   .link,
   .navbarContainer .btn {
     display: none;
@@ -67,7 +70,6 @@
     position: fixed;
     background: #fff;
     width: 100%;
-    /* height: -webkit-fill-available; */
     min-height: 100vh;
     top: 0;
     left: 0;
@@ -123,9 +125,6 @@
   .openedMobileMenu .logout a {
     animation-delay: 0.7s;
   }
-  /* body.no-scroll {
-    overflow: hidden;
-  } */
   .openedMobileMenu .bigPattern {
     width: 80vw;
     left: 100%;
