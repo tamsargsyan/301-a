@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import Ecosystem from "./pages/Ecosystem";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 function App() {
   const sections = [
@@ -82,6 +83,7 @@ function App() {
       <Ecosystem />
       <News />
       <Contact />
+      <Footer />
     </div>
   );
 }

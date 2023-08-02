@@ -23,7 +23,6 @@
   width: 75vw;
   position: relative;
 }
-
 .carousel {
   overflow-x: hidden;
   position: relative;
@@ -33,7 +32,7 @@
 .project {
   border-radius: 20px;
   box-shadow: -15px 6px 28px rgba(34, 43, 60, 0.12);
-  width: 33%;
+  width: 40%;
 }
 .innerCarousel {
   display: flex;
@@ -89,15 +88,11 @@
   .rightBtn {
     display: none;
   }
-  .carousel {
-    overflow: auto;
-  }
   .innerCarousel {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
   .project {
-    width: fit-content;
+    width: 170px;
   }
   .projectInfo h1 {
     font-size: 14px;
@@ -108,11 +103,18 @@
   .author {
     font-size: 10px;
   }
-  .projectInfo {
-    padding: 5px;
+  .slider .innerCarousel {
+    flex-wrap: wrap;
   }
   .projectImg {
-    width: 130px;
-    height: 70px;
+    width: 100%;
+    height: 120px;
+  }
+  .slider {
+    width: 100%;
+    padding: 20px;
+  }
+  .projectsContainer .btns {
+    padding: 0 20px !important;
   }
 }

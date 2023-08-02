@@ -52,7 +52,14 @@ const News = () => {
     <Background
       pattern1={SIDE_PATTERN}
       pattern2={PATTERN}
-      pattern2None={true}
+      pattern2LeftStyle={{
+        width: "190px",
+        height: "190px",
+        top: "290px",
+      }}
+      pattern2RightStyle={{
+        display: "none",
+      }}
       style={{ flexDirection: "column", paddingTop: 0 }}>
       <Header
         h1='Новости "301"'

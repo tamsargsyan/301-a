@@ -133,8 +133,12 @@ const Projects = () => {
         <div className='btns'>
           <Button
             text='Другие проекты'
-            active={true}
-            style={{ padding: "10px 70px" }}
+            style={{
+              padding: "10px 70px",
+              background: "#DD264E",
+              boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
+              color: "#fff",
+            }}
           />
         </div>
       </div>

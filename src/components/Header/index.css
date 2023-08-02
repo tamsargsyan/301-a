@@ -1,6 +1,5 @@
 .headerContainer {
   display: flex;
-  align-items: flex-start;
   gap: 20px;
   width: 100%;
   padding: 0 clamp(21.875rem, 0rem + 18.2292vw, 65.625rem);
@@ -111,6 +110,11 @@
     width: 100%;
     display: flex;
     gap: 20px;
+  }
+  .iconTitle img {
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
   }
   .inner {
     font-size: 14px;

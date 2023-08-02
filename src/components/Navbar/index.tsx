@@ -4,39 +4,40 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 import Button from "../Button";
 import "./index.css";
 
+export const menu = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/",
+  },
+  {
+    id: 2,
+    name: "Projects",
+    link: "/projects",
+  },
+  {
+    id: 3,
+    name: "Media",
+    link: "/media",
+  },
+  {
+    id: 4,
+    name: "Calendar",
+    link: "/calendar",
+  },
+  {
+    id: 5,
+    name: "About us",
+    link: "/about",
+  },
+  {
+    id: 6,
+    name: "Contact",
+    link: "/contact",
+  },
+];
+
 const Navbar = () => {
-  const menu = [
-    {
-      id: 1,
-      name: "Home",
-      link: "/",
-    },
-    {
-      id: 2,
-      name: "Projects",
-      link: "/projects",
-    },
-    {
-      id: 3,
-      name: "Media",
-      link: "/media",
-    },
-    {
-      id: 4,
-      name: "Calendar",
-      link: "/calendar",
-    },
-    {
-      id: 5,
-      name: "About us",
-      link: "/about",
-    },
-    {
-      id: 5,
-      name: "Contact",
-      link: "/contact",
-    },
-  ];
   const windowSize = useWindowSize();
   const [openMenu, setOpenMenu] = useState(false);
   const scrollToTop = () => {
