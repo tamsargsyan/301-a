@@ -1,6 +1,7 @@
 import Background from "../../components/Background";
 import Header from "../../components/Header";
 import SIDE_PATTERN_2 from "../../assets/patterns/side-2.svg";
+import SIDE_PATTERN_2_MOBILE from "../../assets/patterns/side-2-mobile.svg";
 import SMALL_PATTERN_1 from "../../assets/patterns/small-1.svg";
 import ICON from "../../assets/info/4.svg";
 import ARROW from "../../assets/arrow.svg";
@@ -9,6 +10,7 @@ import "./index.css";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Button from "../../components/Button";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Projects = () => {
   const projects = [
@@ -82,9 +84,11 @@ const Projects = () => {
       setCurrentIndex(prevIndex => prevIndex + 1);
     }
   };
-
+  const windowSize = useWindowSize();
   return (
-    <Background pattern1={SIDE_PATTERN_2} pattern2={SMALL_PATTERN_1}>
+    <Background
+      pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
+      pattern2={SMALL_PATTERN_1}>
       <div className='projectsContainer' id='projects'>
         <Header
           h1='НАШИ ПРОЕКТЫ'

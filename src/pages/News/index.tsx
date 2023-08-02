@@ -1,7 +1,8 @@
 import Background from "../../components/Background";
 import Header from "../../components/Header";
 import HeaderIcon from "../../assets/info/news.svg";
-import SIDE_PATTERN from "../../assets/patterns/side-2.svg";
+import SIDE_PATTERN_2 from "../../assets/patterns/side-2.svg";
+import SIDE_PATTERN_2_MOBILE from "../../assets/patterns/side-2-mobile.svg";
 import PATTERN from "../../assets/patterns/side-3.svg";
 import NEWS_1 from "../../assets/news1.png";
 import NEWS_2 from "../../assets/news2.png";
@@ -50,7 +51,7 @@ const News = () => {
   const windowSize = useWindowSize();
   return (
     <Background
-      pattern1={SIDE_PATTERN}
+      pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
       pattern2={PATTERN}
       pattern2LeftStyle={{
         width: "190px",
@@ -66,7 +67,7 @@ const News = () => {
         icon={HeaderIcon}
         style={{
           boxShadow: "0px 0px 16px rgba(49, 58, 75, 0.11)",
-          paddingTop: "50px",
+          paddingTop: "100px",
           paddingBottom: "40px",
         }}
       />

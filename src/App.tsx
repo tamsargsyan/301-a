@@ -3,6 +3,7 @@ import Background from "./components/Background";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import SIDE_PATTERN_2 from "./assets/patterns/side-2.svg";
+import SIDE_PATTERN_2_MOBILE from "./assets/patterns/side-2-mobile.svg";
 import SMALL_PATTERN_2 from "./assets/patterns/small-2.svg";
 import BIG_PATTERN_2 from "./assets/patterns/big-2.svg";
 import BIG_PATTERN_3 from "./assets/patterns/big-3.svg";
@@ -15,8 +16,10 @@ import Ecosystem from "./pages/Ecosystem";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import { useWindowSize } from "./hooks/useWindowSize";
 
 function App() {
+  const windowSize = useWindowSize();
   const sections = [
     {
       id: 1,
@@ -27,7 +30,7 @@ function App() {
       ],
       btn: ["Узнать больше"],
       icon: ICON_1,
-      pattern1: SIDE_PATTERN_2,
+      pattern1: windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2,
       pattern2: SMALL_PATTERN_2,
       pattern3: BIG_PATTERN_2,
     },
@@ -40,7 +43,7 @@ function App() {
       ],
       btn: undefined,
       icon: ICON_2,
-      pattern1: SIDE_PATTERN_2,
+      pattern1: windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2,
       pattern2: SMALL_PATTERN_2,
       pattern3: BIG_PATTERN_3,
     },

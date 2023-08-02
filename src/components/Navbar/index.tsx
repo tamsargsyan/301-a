@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LOGO from "../../assets/logo.svg";
+import BIG_PATTERN from "../../assets/patterns/big-1.svg";
+import SIDE_PATTERN from "../../assets/patterns/side-1-mobile.svg";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import Button from "../Button";
 import "./index.css";
@@ -46,6 +48,15 @@ const Navbar = () => {
       behavior: "smooth",
     });
   };
+  useEffect(() => {
+    // Add or remove the 'no-scroll' class to 'body' based on 'openMenu' state
+    document.body.classList.toggle("no-scroll", openMenu);
+
+    // Cleanup: Remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [openMenu]);
   return (
     <div className='navbarContainer'>
       {windowSize.width < 975 && (
@@ -59,6 +70,15 @@ const Navbar = () => {
           </div>
           {openMenu && (
             <div className='openedMobileMenu'>
+              <div className='bigPattern'>
+                <img src={BIG_PATTERN} alt='Pattern' />
+              </div>
+              <div className='sidePattern1'>
+                <img src={SIDE_PATTERN} alt='Pattern' />
+              </div>
+              <div className='sidePattern2'>
+                <img src={SIDE_PATTERN} alt='Pattern' />
+              </div>
               <div className='menu'>
                 <div className='link'>
                   {menu.map((link, i) => (
