@@ -106,6 +106,7 @@ const News = () => {
             margin: windowSize.width < 975 ? 0 : "50px 0",
             padding: "15px 30px",
           }}
+          link={true}
         />
       </div>
     </Background>

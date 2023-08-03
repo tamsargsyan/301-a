@@ -143,6 +143,7 @@ const Projects = () => {
               boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
               color: "#fff",
             }}
+            link={true}
           />
         </div>
       </div>

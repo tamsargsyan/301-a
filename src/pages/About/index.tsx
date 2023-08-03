@@ -93,6 +93,7 @@ const About = () => {
                 active={info.id === activeItem.id}
                 text={info.name}
                 style={btnStyle}
+                link={true}
               />
             </div>
           ))}

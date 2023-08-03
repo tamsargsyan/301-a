@@ -115,7 +115,7 @@ const Navbar = () => {
         </div>
         <div className='lang'>ENG</div>
       </div>
-      <Button text='Sign In' />
+      <Button text='Sign In' link={true} />
     </div>
   );
 };

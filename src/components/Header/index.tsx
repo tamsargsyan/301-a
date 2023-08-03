@@ -63,6 +63,7 @@ const Header: React.FC<HeaderProps> = ({
                 key={index}
                 text={btnText}
                 style={btnStyles && btnStyles[index]}
+                link={true}
               />
             ))}
           </div>
