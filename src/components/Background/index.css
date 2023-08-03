@@ -30,7 +30,7 @@
 }
 
 .bigPattern {
-  width: 24vw;
+  width: 20vw;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -60,12 +60,21 @@
   bottom: 0;
   transform: rotate(180deg);
 }
-
+@media screen and (max-width: 1600px) {
+  .bigPattern {
+    width: 24vw;
+  }
+}
 @media screen and (max-width: 975px) {
   .pattern1,
   .pattern2 {
     display: none !important;
   }
+  .bigPattern {
+    width: 38vw;
+  }
+}
+@media screen and (max-width: 700px) {
   .bigPattern {
     width: 65vw;
   }
