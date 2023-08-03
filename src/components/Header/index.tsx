@@ -28,10 +28,10 @@ const Header: React.FC<HeaderProps> = ({
     <div className='headerContainer' style={style}>
       {icon &&
         (windowSize.width < 975 ? (
-          <div className={`${!mainImg && "iconTitleStart"} iconTitle`}>
+          <div className={`${h2 && "iconTitleParagraph"} iconTitle`}>
             <img src={icon} alt='Icon' />
             <div className='header'>
-              <h1>{h1}</h1>
+              <span>{h1}</span>
               {h2 && <h2>{h2}</h2>}
             </div>
           </div>

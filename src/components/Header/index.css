@@ -11,6 +11,11 @@
   padding-top: 5px;
 }
 .header {
+  color: #151c26;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
   font-size: clamp(1.875rem, 0rem + 1.5625vw, 5.625rem);
 }
 .header h2 {
@@ -95,22 +100,28 @@
 @media screen and (max-width: 975px) {
   .headerContainer {
     width: 100% !important;
-    padding: 20px;
+    padding: 20px !important;
   }
-  .mainImgHeader {
-    height: 50vw;
-  }
+  .mainImgHeader,
   .mainImgHeader img {
-    width: 100%;
     height: 100%;
+    width: 100%;
   }
   .headerContainer {
     flex-direction: column;
+    gap: 0;
   }
   .iconTitle {
     width: 100%;
     display: flex;
+    align-items: center;
     gap: 20px;
+  }
+  .iconTitleParagraph {
+    align-items: flex-start;
+  }
+  .ecosystemContainer .iconTitle {
+    margin-bottom: 30px;
   }
   .iconTitle img {
     padding-top: 5px;
@@ -119,8 +130,6 @@
   }
   .inner {
     font-size: 17px;
-    padding-left: 65px;
-    width: 75vw;
   }
   .header {
     font-size: 18px;
@@ -130,5 +139,8 @@
   }
   .iconTitleStart {
     align-items: flex-start;
+  }
+  .headerContent {
+    margin: auto;
   }
 }

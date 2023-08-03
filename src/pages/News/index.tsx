@@ -61,7 +61,7 @@ const News = () => {
       pattern2RightStyle={{
         display: "none",
       }}
-      style={{ flexDirection: "column", paddingTop: 0 }}>
+      style={{ flexDirection: "column", paddingTop: "35px" }}>
       <Header
         h1='Новости "301"'
         icon={HeaderIcon}

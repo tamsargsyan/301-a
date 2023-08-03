@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import "./index.css";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 interface BgProps {
   children: ReactNode;
@@ -22,11 +23,17 @@ const Background: React.FC<BgProps> = ({
   pattern2RightStyle,
   bigPatternStyle,
 }) => {
+  const windowSize = useWindowSize();
   return (
     <div
       className='bgContainer'
       style={{
-        padding: pattern1 && pattern2 && pattern3 ? "150px 0" : "40px 0",
+        padding:
+          pattern1 && pattern2 && pattern3
+            ? windowSize.width < 975
+              ? "100px 0"
+              : "150px 0"
+            : "40px 0",
         ...style,
       }}>
       {pattern1 && (

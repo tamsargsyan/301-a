@@ -1,17 +1,28 @@
 .footerContainer {
   background: #151d27;
   padding: 50px;
+  padding-bottom: 85px;
   position: relative;
+  overflow: hidden;
+}
+.footerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../assets/footer-line-bg.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .footerInfo {
   display: flex;
   gap: 100px;
   justify-content: center;
   color: #fff;
-    /* background: url(../../assets/footer-bg.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat; */
+  position: relative;
+  z-index: 3;
 }
 .list {
   display: flex;
@@ -45,15 +56,19 @@
   display: flex;
   gap: 60px;
 }
-/* .logo301Footer {
-  width: 40vw;
+.logo301Footer {
   position: absolute;
-  right: -170px;
-  top: 80px;
-} */
-.logo301Footer img {
-  /* width: 100%; */
-  /* height: 100%; */
+  right: -220px;
+  top: 140px;
+}
+.footerLine {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #c0c0c0;
+  box-shadow: 0px 3px 16px rgba(49, 58, 75, 0.11);
 }
 @media screen and (max-width: 1920px) {
   .footerInfo h2,
@@ -82,6 +97,12 @@
   .footerForthtPart .verticalText {
     font-size: clamp(0.71625rem, 0.002rem + 1.0389vw, 0.833125rem);
   }
+  .footerBg {
+    background: url(../../assets/footer-line-bg-mobile.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (max-width: 1100px) {
   .footerInfo h2,
@@ -91,6 +112,10 @@
   }
 }
 @media screen and (max-width: 875px) {
+  .footerContainer {
+    padding: 20px;
+    padding-top: 50px;
+  }
   .footerInfo {
     flex-direction: column;
     gap: 50px;
@@ -102,5 +127,17 @@
   .list,
   .footerForthtPart .verticalText {
     font-size: 14px;
+  }
+  .logo301Footer {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+  .logo301Footer img {
+    width: 100%;
+    height: 100%;
+  }
+  .footerLine {
+    height: 90px;
   }
 }

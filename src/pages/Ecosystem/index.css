@@ -47,9 +47,18 @@
   width: 100%;
   height: 100%;
 }
+.innerPartners {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
 @media screen and (max-width: 975px) {
   .ecosystemContainer {
-    padding: 20px;
+    padding: 0;
+  }
+  .ecosystemInner {
+    margin-bottom: 40px;
   }
   .ecosystemInner .img {
     display: none;
@@ -64,5 +73,9 @@
   }
   .ecosystemInner .inner {
     width: 100%;
+  }
+  .innerPartners {
+    justify-content: space-between;
+    padding: 20px;
   }
 }

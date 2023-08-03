@@ -17,10 +17,8 @@ import FRIENDS from "../../assets/info/fond.svg";
 import ROSGOSTRAKH from "../../assets/info/rostgostrakh.svg";
 import BETCONSTRUCT from "../../assets/info/betconstruct.png";
 import DIGITAIN from "../../assets/info/digitain.png";
-import { motion } from "framer-motion";
-import "./index.css";
 import Background from "../../components/Background";
-import { useEffect, useRef, useState } from "react";
+import "./index.css";
 
 const Ecosystem = () => {
   const data = [
@@ -182,13 +180,6 @@ const Ecosystem = () => {
       ],
     },
   ];
-  const [width, setWidth] = useState(0);
-  const carousel = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    carousel.current &&
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
 
   return (
     <Background style={{ flexDirection: "column" }}>
@@ -217,19 +208,15 @@ const Ecosystem = () => {
               </div>
             </div>
             {data.partners && (
-              <motion.div ref={carousel} className='carousel'>
-                <motion.div
-                  className='innerCarousel'
-                  drag='x'
-                  dragConstraints={{ right: 0, left: -width }}
-                  initial={{ x: 0 }}>
+              <div className='partners'>
+                <div className='innerPartners'>
                   {data.partners.map(partner => (
                     <div className='partner' key={partner.id}>
                       <img src={partner.img} alt={partner.name} />
                     </div>
                   ))}
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             )}
           </div>
         ))}

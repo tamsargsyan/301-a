@@ -56,4 +56,7 @@
   .ant-dropdown-menu-title-content {
     font-weight: 700;
   }
+  .aboutContainer {
+    padding: 20px;
+  }
 }

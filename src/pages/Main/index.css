@@ -12,6 +12,8 @@
   }
   .logoMobile {
     padding-left: 20px;
+    position: relative;
+    z-index: 3;
   }
   .bgLogo {
     width: 100vw;

@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
   };
-  console.log("Form Data:", formData);
+  // console.log("Form Data:", formData);
 
   return (
     <Background

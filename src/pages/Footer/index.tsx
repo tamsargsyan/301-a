@@ -3,9 +3,11 @@ import { menu } from "../../components/Navbar";
 import LOCATION from "../../assets/location.svg";
 import PHONE from "../../assets/phone.svg";
 import EMAIL from "../../assets/email-white.svg";
-// import LOGO from "../../assets/301-footer.png";
+import LOGO from "../../assets/301-footer.png";
+import LOGO_MOBILE from "../../assets/301-footer-mobile.png";
 import "./index.css";
 import FollowUs from "../../components/FollowUs";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Footer = () => {
   const ecosystem = [
@@ -55,8 +57,10 @@ const Footer = () => {
       icon: EMAIL,
     },
   ];
+  const windowSize = useWindowSize();
   return (
     <div className='footerContainer'>
+      <div className='footerBg'></div>
       <div className='pattern1'>
         <img src={PATTERN} alt='Pattern' />
       </div>
@@ -93,14 +97,22 @@ const Footer = () => {
               </span>
             ))}
           </div>
-          {/* <div className='logo301Footer'>
-            <img src={LOGO} alt='301' />
-          </div> */}
+          {windowSize.width > 875 && (
+            <div className='logo301Footer'>
+              <img src={LOGO} alt='301' />
+            </div>
+          )}
         </div>
         <div className='footerForthtPart'>
           <FollowUs />
         </div>
+        {windowSize.width < 875 && (
+          <div className='logo301Footer'>
+            <img src={LOGO_MOBILE} alt='301' />
+          </div>
+        )}
       </div>
+      <div className='footerLine'></div>
     </div>
   );
 };
