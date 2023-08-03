@@ -20,8 +20,7 @@ const Main = () => {
       style={{
         marginBottom: "50px",
         flexDirection: windowSize.width < 975 ? "column" : "row",
-        paddingTop: "70px",
-        paddingBottom: "70px",
+        padding: "70px 0",
       }}
       bigPatternStyle={{
         display: windowSize.width < 975 ? "none" : "block",
