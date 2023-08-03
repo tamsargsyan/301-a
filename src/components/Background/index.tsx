@@ -9,6 +9,7 @@ interface BgProps {
   style?: Object;
   pattern2LeftStyle?: Object;
   pattern2RightStyle?: Object;
+  bigPatternStyle?: Object;
 }
 
 const Background: React.FC<BgProps> = ({
@@ -19,6 +20,7 @@ const Background: React.FC<BgProps> = ({
   style,
   pattern2LeftStyle,
   pattern2RightStyle,
+  bigPatternStyle,
 }) => {
   return (
     <div
@@ -38,7 +40,7 @@ const Background: React.FC<BgProps> = ({
         </div>
       )}
       {pattern3 && (
-        <div className='bigPattern'>
+        <div className='bigPattern' style={bigPatternStyle}>
           <img src={pattern3} alt='Pattern' />
         </div>
       )}

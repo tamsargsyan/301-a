@@ -9,7 +9,7 @@ interface HeaderProps {
   btns?: string[];
   style?: Object;
   btnStyles?: React.CSSProperties[];
-  icon: string;
+  icon?: string;
   mainImg?: string;
 }
 
@@ -26,19 +26,20 @@ const Header: React.FC<HeaderProps> = ({
   const windowSize = useWindowSize();
   return (
     <div className='headerContainer' style={style}>
-      {windowSize.width < 975 ? (
-        <div className={`${!mainImg && "iconTitleStart"} iconTitle`}>
-          <img src={icon} alt='Icon' />
-          <div className='header'>
-            <h1>{h1}</h1>
-            {h2 && <h2>{h2}</h2>}
+      {icon &&
+        (windowSize.width < 975 ? (
+          <div className={`${!mainImg && "iconTitleStart"} iconTitle`}>
+            <img src={icon} alt='Icon' />
+            <div className='header'>
+              <h1>{h1}</h1>
+              {h2 && <h2>{h2}</h2>}
+            </div>
           </div>
-        </div>
-      ) : (
-        <div className='icon'>
-          <img src={icon} alt='Icon' />
-        </div>
-      )}
+        ) : (
+          <div className='icon'>
+            <img src={icon} alt='Icon' />
+          </div>
+        ))}
       <div className='headerContent'>
         {windowSize.width > 975 && (
           <div className='header'>

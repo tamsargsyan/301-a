@@ -3,6 +3,7 @@
   display: inline-block;
   text-orientation: mixed;
   font-weight: 500;
+  color: #fff;
 }
 .followUsContainer .line {
   height: 85px;
@@ -18,12 +19,23 @@
   gap: 20px;
 }
 .socialMedias a {
-  width: 27px;
-  height: 27px;
+  width: 15px;
+  height: 15px;
 }
 .socialMedias a img {
   width: 100%;
   height: 100%;
+}
+.mainFollowUs .line {
+  background: #151c26;
+}
+.mainFollowUs .verticalText {
+  color: #151c26;
+}
+@media screen and (max-width: 975px) {
+  .mainFollowUs {
+    display: none;
+  }
 }
 @media screen and (max-width: 875px) {
   .verticalText,

@@ -17,6 +17,7 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import { useWindowSize } from "./hooks/useWindowSize";
+import Main from "./pages/Main";
 
 function App() {
   const windowSize = useWindowSize();
@@ -64,6 +65,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
+      <Main />
       {sections.map(section => (
         <div key={section.id}>
           <Background

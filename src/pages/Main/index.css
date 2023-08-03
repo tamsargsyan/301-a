@@ -1,0 +1,19 @@
+.bgLogo {
+  width: 30vw;
+  position: relative;
+}
+.bgLogo img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 975px) {
+  .mainBigPattern {
+    position: absolute;
+  }
+  .logoMobile {
+    padding-left: 20px;
+  }
+  .bgLogo {
+    width: 100vw;
+  }
+}
