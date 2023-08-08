@@ -1,31 +1,42 @@
-import PROJECT from "../../assets/projectAuthor/project-1.png";
-import AUTHOR from "../../assets/projectAuthor/1.svg";
 import FLAG from "../../assets/flag.svg";
 import SAVE from "../../assets/projectAuthor/save.svg";
 import Button from "../Button";
 import "./index.css";
 
-const Project = () => {
+interface ProjectProps {
+  author: string;
+  authorImg: string;
+  title: string;
+  flag: number;
+  desc: string;
+  projectImg: string;
+}
+
+const Project: React.FC<ProjectProps> = ({
+  author,
+  authorImg,
+  title,
+  flag,
+  desc,
+  projectImg,
+}) => {
   return (
     <div className='ourProject__project'>
       <div className='ourProject__projectInner'>
         <div className='ourProject__projectInfo'>
           <div className='ourProject__author'>
-            <img src={AUTHOR} alt='Author' />
-            <span>Peter Nemoy</span>
+            <img src={authorImg} alt='Author' />
+            <span>{author}</span>
           </div>
           <div className='ourProject__title'>
-            <span>301 Land of Wisdom</span>
+            <span>{title}</span>
             <div className='flag'>
               <img src={FLAG} alt='FLAG' />
-              <span>15</span>
+              <span>{flag}</span>
             </div>
           </div>
           <div className='ourProject__desc'>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
+            <p>{desc}</p>
           </div>
         </div>
         <div className='btns'>
@@ -57,7 +68,7 @@ const Project = () => {
         </div>
       </div>
       <div className='ourProject__projectImg'>
-        <img src={PROJECT} alt='Project' />
+        <img src={projectImg} alt='Project' />
       </div>
     </div>
   );

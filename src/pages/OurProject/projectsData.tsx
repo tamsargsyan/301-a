@@ -1,7 +1,45 @@
 import AUTHOR_1 from "../../assets/projectAuthor/1.svg";
 import PROJECT_1 from "../../assets/projectAuthor/project-1.png";
 
-export const data = [
+export const typeBtn = [
+  {
+    id: 1,
+    name: "Education",
+    type: "education",
+  },
+  {
+    id: 2,
+    name: "Science",
+    type: "science",
+  },
+  {
+    id: 3,
+    name: "Culture",
+    type: "culture",
+  },
+  {
+    id: 4,
+    name: "Innovation",
+    type: "innovation",
+  },
+  {
+    id: 5,
+    name: "Territory development",
+    type: "territory-development",
+  },
+  {
+    id: 6,
+    name: "Ontology",
+    type: "ontology",
+  },
+  {
+    id: 7,
+    name: "All",
+    type: "all",
+  },
+];
+
+export const projectsData = [
   {
     id: 1,
     name: "Project Ideas we offer",
@@ -102,7 +140,7 @@ export const data = [
       },
       {
         id: 5,
-        author: "Peter Nemoy",
+        author: "Peter John",
         authorImg: AUTHOR_1,
         title: "301 Land of Wisdom",
         flag: 15,
@@ -113,7 +151,7 @@ export const data = [
       },
       {
         id: 6,
-        author: "Peter Nemoy",
+        author: "Peter Smith",
         authorImg: AUTHOR_1,
         title: "301 Land of Wisdom",
         flag: 15,
@@ -157,7 +195,7 @@ export const data = [
       },
       {
         id: 10,
-        author: "Peter Nemoy",
+        author: "John Nemoy",
         authorImg: AUTHOR_1,
         title: "301 Land of Wisdom",
         flag: 15,

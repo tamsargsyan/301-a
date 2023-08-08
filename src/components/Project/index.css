@@ -4,6 +4,10 @@
   display: flex;
   width: 70vw;
   border-radius: 20px;
+  margin-bottom: 30px;
+}
+.ourProject__project:first-child {
+  margin-top: 30px;
 }
 .ourProject__projectImg {
   width: 100%;
@@ -29,7 +33,7 @@
   margin-bottom: 20px;
 }
 .ourProject__title {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .ourProject__author img {
   border: 2px solid #dd264e;

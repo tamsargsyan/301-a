@@ -10,11 +10,13 @@
   font-weight: 700;
   font-family: Montserrat;
 }
+.aboutInner .activeBtn {
+  transform: translateX(20px);
+  box-shadow: -21px 13px 29px rgba(221, 38, 78, 0.35);
+}
 .activeBtn {
   background-color: var(--main-color) !important;
   color: #fff !important;
-  transform: translateX(20px);
-  box-shadow: -21px 13px 29px rgba(221, 38, 78, 0.35);
 }
 .btn_icon {
   width: 25px;
