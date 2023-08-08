@@ -1,6 +1,6 @@
 import { routerType } from "../types/router.types";
-import About from "./About";
 import Home from "./Home";
+import OurProjects from "./OurProject";
 
 const pagesData: routerType[] = [
   {
@@ -9,9 +9,9 @@ const pagesData: routerType[] = [
     title: "home",
   },
   {
-    path: "about",
-    element: <About />,
-    title: "about",
+    path: "projects",
+    element: <OurProjects />,
+    title: "Projects",
   },
 ];
 

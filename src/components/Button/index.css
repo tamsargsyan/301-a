@@ -8,12 +8,17 @@
   width: fit-content;
   transition: 0.3s ease;
   font-weight: 700;
+  font-family: Montserrat;
 }
 .activeBtn {
   background-color: var(--main-color) !important;
   color: #fff !important;
   transform: translateX(20px);
   box-shadow: -21px 13px 29px rgba(221, 38, 78, 0.35);
+}
+.btn_icon {
+  width: 25px;
+  height: 25px;
 }
 @media screen and (max-width: 975px) {
   .btn {

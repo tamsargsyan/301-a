@@ -94,6 +94,7 @@ const About = () => {
                 text={info.name}
                 style={btnStyle}
                 link={true}
+                to=''
               />
             </div>
           ))}

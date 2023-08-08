@@ -144,6 +144,7 @@ const Projects = () => {
               color: "#fff",
             }}
             link={true}
+            to='/projects'
           />
         </div>
       </div>

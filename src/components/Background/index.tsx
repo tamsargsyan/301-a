@@ -11,6 +11,8 @@ interface BgProps {
   pattern2LeftStyle?: Object;
   pattern2RightStyle?: Object;
   bigPatternStyle?: Object;
+  sidePatter1Style?: Object;
+  sidePatter2Style?: Object;
 }
 
 const Background: React.FC<BgProps> = ({
@@ -22,6 +24,8 @@ const Background: React.FC<BgProps> = ({
   pattern2LeftStyle,
   pattern2RightStyle,
   bigPatternStyle,
+  sidePatter1Style,
+  sidePatter2Style,
 }) => {
   const windowSize = useWindowSize();
   return (
@@ -37,7 +41,7 @@ const Background: React.FC<BgProps> = ({
         ...style,
       }}>
       {pattern1 && (
-        <div className='sidePattern1'>
+        <div className='sidePattern1' style={sidePatter1Style}>
           <img src={pattern1} alt='Pattern' />
         </div>
       )}
@@ -57,7 +61,7 @@ const Background: React.FC<BgProps> = ({
         </div>
       )}
       {pattern1 && (
-        <div className='sidePattern2'>
+        <div className='sidePattern2' style={sidePatter2Style}>
           <img src={pattern1} alt='Pattern' />
         </div>
       )}

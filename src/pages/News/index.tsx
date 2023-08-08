@@ -107,6 +107,7 @@ const News = () => {
             padding: "15px 30px",
           }}
           link={true}
+          to={""}
         />
       </div>
     </Background>
