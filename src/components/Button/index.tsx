@@ -23,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
     <>
       {link ? (
         <NavLink
+          onClick={onClick}
           to={to}
           className={`${active && "activeBtn"} btn`}
           style={style}>

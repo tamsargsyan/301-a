@@ -13,6 +13,11 @@ const pagesData: routerType[] = [
     element: <OurProjects />,
     title: "Projects",
   },
+  {
+    path: "projects/:id",
+    element: <OurProjects />,
+    title: "Project",
+  },
 ];
 
 export default pagesData;

@@ -1,5 +1,39 @@
 import AUTHOR_1 from "../../assets/projectAuthor/1.svg";
 import PROJECT_1 from "../../assets/projectAuthor/project-1.png";
+import FULL_PROJECT_1 from "../../assets/projectAuthor/project-full-1.svg";
+import ROSGOSTRAKH from "../../assets/info/rostgostrakh.svg";
+import BETCONSTRUCT from "../../assets/info/betconstruct.png";
+import DIGITAIN from "../../assets/info/digitain.png";
+
+interface PartnersTypes {
+  id: number;
+  name: string;
+  img: string;
+}
+
+interface WorkTeamTypes {
+  id: number;
+  name: string;
+  position: string;
+}
+export interface ProjectTypes {
+  id: number;
+  author: string;
+  authorImg: string;
+  title: string;
+  flag: number;
+  desc: string;
+  isSaved: boolean;
+  img: string;
+  type: string;
+  fullImg: string;
+  problem: string;
+  budget: number;
+  collected: number;
+  remaining: number;
+  workTeam: WorkTeamTypes[];
+  partners: PartnersTypes[];
+}
 
 export const typeBtn = [
   {
@@ -54,6 +88,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "education",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 2,
@@ -65,6 +154,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "education",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 3,
@@ -76,6 +220,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "science",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 4,
@@ -87,6 +286,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "science",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
     ],
   },
@@ -104,6 +358,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "innovation",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 2,
@@ -115,6 +424,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "territory-development",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 3,
@@ -126,6 +490,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "ontology",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 4,
@@ -137,6 +556,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "education",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 5,
@@ -148,6 +622,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "education",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 6,
@@ -159,6 +688,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "culture",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 7,
@@ -170,6 +754,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "culture",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 8,
@@ -181,6 +820,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "culture",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 9,
@@ -192,6 +886,61 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "innovation",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
       {
         id: 10,
@@ -203,11 +952,67 @@ export const projectsData = [
         isSaved: false,
         img: PROJECT_1,
         type: "innovation",
+        fullImg: FULL_PROJECT_1,
+        problem:
+          "Фонд «301. Земля мудрости» — некоммерческая организация и осуществляет свою деятельность с помощью взносов участников клуба «301». Размер взноса составляет 301$ в месяц. Участником клуба может стать каждый, кто разделяет нашу миссию и ценности вне зависимости от географических границ.",
+        budget: 1500,
+        collected: 800,
+        remaining: 700,
+        workTeam: [
+          {
+            id: 1,
+            name: "Julie Barnes",
+            position: "Project Manager",
+          },
+          {
+            id: 2,
+            name: "Den Brown",
+            position: "Donor",
+          },
+          {
+            id: 3,
+            name: "Anna Moore",
+            position: "ambassador",
+          },
+          {
+            id: 4,
+            name: "Nicole McConaughey",
+            position: "volunteer",
+          },
+          {
+            id: 5,
+            name: "Jack Jackman",
+            position: "expert",
+          },
+          {
+            id: 6,
+            name: "Den Farrell",
+            position: "partner",
+          },
+        ],
+        partners: [
+          {
+            id: 1,
+            name: "Rosgostrakh",
+            img: ROSGOSTRAKH,
+          },
+          {
+            id: 2,
+            name: "Betconstruct",
+            img: BETCONSTRUCT,
+          },
+          {
+            id: 3,
+            name: "Digitain",
+            img: DIGITAIN,
+          },
+        ],
       },
     ],
   },
   {
     id: 3,
     name: "Projects we Launched",
+    projects: []
   },
 ];

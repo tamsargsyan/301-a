@@ -1,0 +1,174 @@
+.fullProjectContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fullProjectBg {
+  height: 100%;
+  position: relative;
+}
+.backBtn {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #fff;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fullProjectBg .bgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fullProjectBg_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-family: Nexa; */
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 8.4px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+.fullProject_titleInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fullProject_problemInner,
+.fullProject_titleInner,
+.fullProject_inner,
+.roadMap_heading {
+  width: 100%;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.07);
+  padding: 25px 30px;
+}
+.fullProject_inner {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f9fbff;
+}
+.fullProject_titleInner .ourProject__author {
+  margin: 0;
+}
+.titlePart {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.titlePart .flag {
+  border-radius: 46px;
+  border: 1px solid rgba(49, 58, 75, 0.16);
+  background: rgba(244, 244, 244, 0.47);
+  padding: 5px 15px;
+}
+.problem_header,
+.problem_heading,
+.download_pdf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.download_pdf {
+  color: #1bb7d9;
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 0;
+}
+.problem_inner {
+  color: var(--text-color);
+  text-align: justify;
+  font-weight: 500;
+  width: 60vw;
+  padding-left: 55px;
+}
+.roadMap_heading {
+  justify-content: flex-start;
+  border: 1px solid rgba(49, 58, 75, 0.27);
+}
+.roadMap_inner {
+  background-color: #fff;
+  overflow: hidden;
+}
+.terms {
+  border-radius: 46px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  width: 250px;
+  display: flex;
+}
+.roadMap_inner {
+  padding: 20px 30px;
+}
+.terms button {
+  padding: 0;
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: inherit;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.terms button:first-child {
+  background: #189387;
+  color: #fff;
+  font-family: Montserrat;
+}
+.month_circle {
+  width: 10px;
+  height: 10px;
+  background-color: #dd264e;
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+}
+.chart,
+.chart_month {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart {
+  margin-top: 50px;
+  /* width: 40%; */
+}
+.chart_info h1 {
+  font-size: 18px;
+  color: #474a54;
+}
+.chart_info p {
+  font-size: 6.5px;
+  color: #6e7175;
+}
+.chart_month {
+  gap: 7px;
+  margin-top: 20px;
+}
+.chartContainer {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+  /* cursor: grab; */
+  gap: 50px;
+}

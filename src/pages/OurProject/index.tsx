@@ -5,12 +5,13 @@ import PATTERN from "../../assets/patterns/side-2.svg";
 import PATTERN_MOBILE from "../../assets/patterns/side-2-mobile.svg";
 import ICON from "../../assets/info/4.svg";
 import Project from "../../components/Project";
-import { projectsData, typeBtn } from "./projectsData";
+import { ProjectTypes, projectsData, typeBtn } from "./projectsData";
 import { MenuProps, Spin } from "antd";
 import Button from "../../components/Button";
-import "./index.css";
 import { useWindowSize } from "../../hooks/useWindowSize";
 import DropDown from "../../components/Dropdown";
+import FullProjectInfo from "../FullProjectInfo";
+import "./index.css";
 
 const items: MenuProps["items"] = [
   {
@@ -86,6 +87,25 @@ const OurProjects = () => {
       return { ...prevData, projects: updatedProjects };
     });
   };
+  const [isView, setIsView] = useState(false);
+  useEffect(() => {
+    const handlePopstate = () => {
+      setIsView(false);
+    };
+
+    window.addEventListener("popstate", handlePopstate);
+
+    return () => {
+      window.removeEventListener("popstate", handlePopstate);
+    };
+  }, []);
+  const [viewedProject, setViewedProject] = useState<
+    ProjectTypes | undefined
+  >();
+  const view = (id: number) => {
+    const viewedProject = currentProjects?.find(project => project.id === id);
+    setViewedProject(viewedProject);
+  };
   return (
     <Background
       pattern1={windowSize.width < 800 ? PATTERN_MOBILE : PATTERN}
@@ -135,45 +155,54 @@ const OurProjects = () => {
           <DropDown items={items} txt='Education' />
         )}
       </div>
-      {!loading ? (
-        currentProjects?.length ? (
-          currentProjects?.map(project => (
-            <Fragment key={project.id}>
-              <Project
-                author={project.author}
-                authorImg={project.authorImg}
-                title={project.title}
-                flag={project.flag}
-                desc={project.desc}
-                projectImg={project.img}
-                heartit={() => heartit(project.id)}
-                isSaved={project.isSaved}
-              />
-            </Fragment>
-          ))
-        ) : (
-          <div className='noProject'>There is no project</div>
-        )
+      {!isView ? (
+        <>
+          {!loading ? (
+            currentProjects?.length ? (
+              currentProjects?.map(project => (
+                <Fragment key={project.id}>
+                  <Project
+                    author={project.author}
+                    authorImg={project.authorImg}
+                    title={project.title}
+                    flag={project.flag}
+                    desc={project.desc}
+                    projectImg={project.img}
+                    heartit={() => heartit(project.id)}
+                    isSaved={project.isSaved}
+                    id={project.id}
+                    setIsView={setIsView}
+                    view={view}
+                  />
+                </Fragment>
+              ))
+            ) : (
+              <div className='noProject'>There is no project</div>
+            )
+          ) : (
+            <Spin />
+          )}
+          {totalPages &&
+            totalPages.length > 1 &&
+            !!currentProjects?.length &&
+            !loading && (
+              <div className='pagination'>
+                {totalPages.map((_, i) => (
+                  <button
+                    key={i}
+                    className={`${
+                      currentPage === i + 1 && "paginationBtn_active"
+                    } paginationBtn`}
+                    onClick={() => setCurrentPage(i + 1)}>
+                    {i + 1}
+                  </button>
+                ))}
+              </div>
+            )}
+        </>
       ) : (
-        <Spin />
+        <FullProjectInfo viewedProject={viewedProject} />
       )}
-      {totalPages &&
-        totalPages.length > 1 &&
-        !!currentProjects?.length &&
-        !loading && (
-          <div className='pagination'>
-            {totalPages.map((_, i) => (
-              <button
-                key={i}
-                className={`${
-                  currentPage === i + 1 && "paginationBtn_active"
-                } paginationBtn`}
-                onClick={() => setCurrentPage(i + 1)}>
-                {i + 1}
-              </button>
-            ))}
-          </div>
-        )}
     </Background>
   );
 };

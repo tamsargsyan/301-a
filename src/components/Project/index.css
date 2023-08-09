@@ -59,6 +59,7 @@
   gap: 6px;
   font-family: Montserrat;
   color: var(--text-color);
+  font-weight: 500;
 }
 .heart-btn.liked .heart {
   fill: #ee3529;

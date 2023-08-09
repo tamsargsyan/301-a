@@ -11,6 +11,9 @@ interface ProjectProps {
   projectImg: string;
   heartit: () => void;
   isSaved: boolean;
+  id: number;
+  setIsView: (arg: boolean) => void;
+  view: (arg: number) => void;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -22,6 +25,9 @@ const Project: React.FC<ProjectProps> = ({
   projectImg,
   heartit,
   isSaved,
+  id,
+  setIsView,
+  view,
 }) => {
   return (
     <div className='ourProject__project'>
@@ -46,13 +52,17 @@ const Project: React.FC<ProjectProps> = ({
           <Button
             text='Wiev'
             link={true}
-            to={""}
+            to={`${id}`}
             style={{
               padding: "0 30px",
               height: "35px",
               background: "#DD264E",
               color: "#fff",
-              fontWeight: "400",
+              fontWeight: "500",
+            }}
+            onClick={() => {
+              setIsView(true);
+              view(id);
             }}
           />
           <button
