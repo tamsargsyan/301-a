@@ -2,9 +2,8 @@ import { useState } from "react";
 import Button from "../../components/Button";
 import "./index.css";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import DROPDOWN_ARROW from "../../assets/dropdown-arrow.svg";
 import type { MenuProps } from "antd";
-import { Dropdown, Space } from "antd";
+import DropDown from "../../components/Dropdown";
 
 const btnStyle = {
   padding: "15px 30px",
@@ -100,14 +99,7 @@ const About = () => {
           ))}
         </div>
         {windowSize.width < 1100 && (
-          <Dropdown menu={{ items }} trigger={["click"]}>
-            <button onClick={e => e.preventDefault()}>
-              <Space>
-                страна мудрости
-                <img src={DROPDOWN_ARROW} alt='Arrow' />
-              </Space>
-            </button>
-          </Dropdown>
+          <DropDown items={items} txt='страна мудрости' />
         )}
         <div className='aboutContent'>
           {activeItem.desc.map((desc, i) => (

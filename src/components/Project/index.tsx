@@ -1,5 +1,4 @@
 import FLAG from "../../assets/flag.svg";
-import SAVE from "../../assets/projectAuthor/save.svg";
 import Button from "../Button";
 import "./index.css";
 
@@ -10,6 +9,8 @@ interface ProjectProps {
   flag: number;
   desc: string;
   projectImg: string;
+  heartit: () => void;
+  isSaved: boolean;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -19,6 +20,8 @@ const Project: React.FC<ProjectProps> = ({
   flag,
   desc,
   projectImg,
+  heartit,
+  isSaved,
 }) => {
   return (
     <div className='ourProject__project'>
@@ -39,10 +42,10 @@ const Project: React.FC<ProjectProps> = ({
             <p>{desc}</p>
           </div>
         </div>
-        <div className='btns'>
+        <div className='btns' style={{ width: "100%" }}>
           <Button
             text='Wiev'
-            link={false}
+            link={true}
             to={""}
             style={{
               padding: "0 30px",
@@ -52,19 +55,14 @@ const Project: React.FC<ProjectProps> = ({
               fontWeight: "400",
             }}
           />
-          <Button
-            text='Saved project'
-            link={false}
-            to={""}
-            icon={SAVE}
-            style={{
-              padding: "0 30px",
-              height: "35px",
-              gap: "10px",
-              border: "none",
-              fontWeight: "400",
-            }}
-          />
+          <button
+            className={`heart-btn ${isSaved ? "liked" : ""}`}
+            onClick={heartit}>
+            <span>Saved project</span>
+            <svg className='heart heart-icon' viewBox='0 0 32 29.6'>
+              <path d='M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z' />
+            </svg>
+          </button>
         </div>
       </div>
       <div className='ourProject__projectImg'>

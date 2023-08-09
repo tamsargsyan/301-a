@@ -7,6 +7,7 @@ interface ButtonProps {
   link: boolean;
   to: To;
   icon?: string;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   link,
   to,
   icon,
+  onClick,
 }) => {
   return (
     <>
@@ -28,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
         </NavLink>
       ) : (
         <button
-          onClick={e => e.preventDefault()}
+          onClick={onClick}
           className={`${active && "activeBtn"} btn`}
           style={style}>
           {text}
