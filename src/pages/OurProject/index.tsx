@@ -104,6 +104,7 @@ const OurProjects = () => {
   >();
   const view = (id: number) => {
     const viewedProject = currentProjects?.find(project => project.id === id);
+    //@ts-ignore
     setViewedProject(viewedProject);
   };
   return (

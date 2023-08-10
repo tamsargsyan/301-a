@@ -15,7 +15,7 @@ export const menu = [
   {
     id: 2,
     name: "Projects",
-    link: "/projects",
+    link: "#projects",
   },
   {
     id: 3,
@@ -82,7 +82,7 @@ const Navbar = () => {
                     <a
                       onClick={e => e.preventDefault()}
                       key={i}
-                      href='#projects'
+                      href={link.link}
                       style={{ animationDelay: `${i * 0.1}s` }}>
                       {link.name}
                     </a>
@@ -108,7 +108,7 @@ const Navbar = () => {
       <div className='menu'>
         <div className='link'>
           {menu.map((link, i) => (
-            <a key={i} href='#projects'>
+            <a key={i} href={link.link}>
               {link.name}
             </a>
           ))}
