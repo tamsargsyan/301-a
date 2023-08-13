@@ -25,6 +25,10 @@ button {
   border: none;
   cursor: pointer;
 }
+button:disabled {
+  opacity: 0.99;
+  cursor: not-allowed;
+}
 h1,
 h2 {
   margin: 0;

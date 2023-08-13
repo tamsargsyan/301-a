@@ -13,9 +13,10 @@ import "./index.css";
 
 interface Props {
   viewedProject: ProjectTypes | undefined;
+  setIsView: (arg: boolean) => void;
 }
 
-const FullProjectInfo: React.FC<Props> = ({ viewedProject }) => {
+const FullProjectInfo: React.FC<Props> = ({ viewedProject, setIsView }) => {
   const arr = [
     {
       id: 1,
@@ -110,7 +111,7 @@ const FullProjectInfo: React.FC<Props> = ({ viewedProject }) => {
           <div className='fullProjectInner'>
             <div className='fullProjectBg'>
               <div className='overlay'></div>
-              <button className='backBtn'>
+              <button className='backBtn' onClick={() => setIsView(false)}>
                 <img src={ARROW} alt='Back Button' />
               </button>
               <img

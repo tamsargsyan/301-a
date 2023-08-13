@@ -12,6 +12,7 @@ import { useWindowSize } from "../../hooks/useWindowSize";
 import DropDown from "../../components/Dropdown";
 import FullProjectInfo from "../FullProjectInfo";
 import "./index.css";
+import { useNavigate } from "react-router";
 
 const items: MenuProps["items"] = [
   {
@@ -58,7 +59,7 @@ const OurProjects = () => {
       setFilteredData(projectsData[activeProjects]);
     } else {
       const filteredProjects = projectsData[activeProjects].projects?.filter(
-        category => category.type === typedProject
+        (category) => category.type === typedProject
       );
       setFilteredData({
         ...projectsData[activeProjects],
@@ -80,8 +81,8 @@ const OurProjects = () => {
       0
     );
   const heartit = (id: number) => {
-    setFilteredData(prevData => {
-      const updatedProjects = prevData.projects?.map(project =>
+    setFilteredData((prevData) => {
+      const updatedProjects = prevData.projects?.map((project) =>
         project.id === id ? { ...project, isSaved: !project.isSaved } : project
       );
       return { ...prevData, projects: updatedProjects };
@@ -103,40 +104,47 @@ const OurProjects = () => {
     ProjectTypes | undefined
   >();
   const view = (id: number) => {
-    const viewedProject = currentProjects?.find(project => project.id === id);
+    const viewedProject = currentProjects?.find((project) => project.id === id);
     //@ts-ignore
     setViewedProject(viewedProject);
   };
+  const navigate = useNavigate();
+  useEffect(() => {
+    !isView && navigate("/projects");
+  }, [isView, navigate]);
   return (
     <Background
       pattern1={windowSize.width < 800 ? PATTERN_MOBILE : PATTERN}
       style={{ padding: 0, flexDirection: "column" }}
-      sidePatter2Style={{ display: "none" }}>
-      <div className='filteringWrapper'>
+      sidePatter2Style={{ display: "none" }}
+    >
+      <div className="filteringWrapper">
         <Header
-          h1='НАШИ ПРОЕКТЫ'
+          h1="НАШИ ПРОЕКТЫ"
           p={[
             "За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. ",
           ]}
           icon={ICON}
         />
         {windowSize.width > 800 ? (
-          <div className='filteringBtnsWrapper'>
+          <div className="filteringBtnsWrapper">
             {projectsData.map((project, i) => (
               <button
+                disabled={isView}
                 key={i}
                 className={`${activeProjects === i && "activeProjectBtn"}`}
-                onClick={() => handleClick(i)}>
+                onClick={() => handleClick(i)}
+              >
                 {project.name}
               </button>
             ))}
           </div>
         ) : (
-          <DropDown items={items} txt='Projects we fundraise' />
+          <DropDown items={items} txt="Projects we fundraise" />
         )}
         {windowSize.width > 800 ? (
-          <div className='typedBtnsWrapper'>
-            {typeBtn.map(btn => (
+          <div className="typedBtnsWrapper">
+            {typeBtn.map((btn) => (
               <Fragment key={btn.id}>
                 <Button
                   text={btn.name}
@@ -148,19 +156,20 @@ const OurProjects = () => {
                     border: "none",
                   }}
                   onClick={() => setTypedProject(btn.type)}
+                  disabled={isView}
                 />
               </Fragment>
             ))}
           </div>
         ) : (
-          <DropDown items={items} txt='Education' />
+          <DropDown items={items} txt="Education" />
         )}
       </div>
       {!isView ? (
         <>
           {!loading ? (
             currentProjects?.length ? (
-              currentProjects?.map(project => (
+              currentProjects?.map((project) => (
                 <Fragment key={project.id}>
                   <Project
                     author={project.author}
@@ -178,7 +187,7 @@ const OurProjects = () => {
                 </Fragment>
               ))
             ) : (
-              <div className='noProject'>There is no project</div>
+              <div className="noProject">There is no project</div>
             )
           ) : (
             <Spin />
@@ -187,14 +196,15 @@ const OurProjects = () => {
             totalPages.length > 1 &&
             !!currentProjects?.length &&
             !loading && (
-              <div className='pagination'>
+              <div className="pagination">
                 {totalPages.map((_, i) => (
                   <button
                     key={i}
                     className={`${
                       currentPage === i + 1 && "paginationBtn_active"
                     } paginationBtn`}
-                    onClick={() => setCurrentPage(i + 1)}>
+                    onClick={() => setCurrentPage(i + 1)}
+                  >
                     {i + 1}
                   </button>
                 ))}
@@ -202,7 +212,7 @@ const OurProjects = () => {
             )}
         </>
       ) : (
-        <FullProjectInfo viewedProject={viewedProject} />
+        <FullProjectInfo viewedProject={viewedProject} setIsView={setIsView} />
       )}
     </Background>
   );
