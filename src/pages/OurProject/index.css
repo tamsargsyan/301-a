@@ -31,7 +31,8 @@
 }
 .noProject,
 .ant-spin {
-  margin: 100px 0;
+  margin-top: 60px;
+  margin-bottom: 100px;
 }
 .activeProjectBtn {
   color: #fff;
@@ -44,6 +45,7 @@
   margin-top: 30px;
   margin-bottom: 60px;
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .paginationBtn {

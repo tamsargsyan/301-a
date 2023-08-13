@@ -4,6 +4,7 @@
   padding-bottom: 85px;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .footerBg {
   position: absolute;

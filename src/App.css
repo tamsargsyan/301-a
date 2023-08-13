@@ -29,6 +29,12 @@ button:disabled {
   opacity: 0.99;
   cursor: not-allowed;
 }
+.pagination button:disabled {
+  border: 1px solid #ddd !important;
+}
+button:disabled img {
+  opacity: 0.2;
+}
 h1,
 h2 {
   margin: 0;
@@ -41,6 +47,24 @@ h2 {
   display: flex;
   gap: 20px;
   margin-top: 30px;
+}
+.ant-dropdown-open {
+  z-index: 9999;
+}
+.ant-dropdown-menu {
+  top: -35px;
+  padding-top: 40px !important;
+  padding-bottom: 20px !important;
+  border-bottom-left-radius: 45px !important;
+  border-bottom-right-radius: 45px !important;
+}
+.ant-dropdown-menu-item {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.ant-dropdown-menu-item:last-child {
+  border-bottom-left-radius: 45px !important;
+  border-bottom-right-radius: 45px !important;
 }
 @media screen and (max-width: 975px) {
   .btns {

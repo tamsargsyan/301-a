@@ -9,6 +9,7 @@ interface ButtonProps {
   icon?: string;
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   onClick,
   disabled,
+  className,
 }) => {
   return (
     <>
@@ -27,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
         <NavLink
           onClick={onClick}
           to={to}
-          className={`${active && "activeBtn"} btn`}
+          className={`${active && "activeBtn"} ${className} btn`}
           style={style}
         >
           {text}
@@ -36,7 +38,7 @@ const Button: React.FC<ButtonProps> = ({
         <button
           disabled={disabled}
           onClick={onClick}
-          className={`${active && "activeBtn"} btn`}
+          className={`${active && "activeBtn"} ${className} btn`}
           style={style}
         >
           {text}

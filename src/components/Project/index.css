@@ -120,6 +120,13 @@
   .ourProject__projectInner .btns {
     font-size: 13px;
     text-align: justify;
+    justify-content: space-between;
+  }
+  .ourProject__projectInner .btns {
+    flex-direction: row;
+  }
+  .ourProject__projectInner .btns button {
+    width: 100% !important;
   }
   .ourProject__projectImg {
     border-radius: inherit;

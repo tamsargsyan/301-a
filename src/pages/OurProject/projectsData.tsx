@@ -4,12 +4,13 @@ import FULL_PROJECT_1 from "../../assets/projectAuthor/project-full-1.svg";
 import ROSGOSTRAKH from "../../assets/info/rostgostrakh.svg";
 import BETCONSTRUCT from "../../assets/info/betconstruct.png";
 import DIGITAIN from "../../assets/info/digitain.png";
-import ROSE_CIRCLE from "../../assets/projectAuthor/rose-circle.svg";
-import GREEN_CIRCLE from "../../assets/projectAuthor/green-circle.svg";
-import ORANGE_CIRCLE from "../../assets/projectAuthor/orange-circle.svg";
-import YELLOW_CIRCLE from "../../assets/projectAuthor/yellow-circle.svg";
-import BLUE_CIRCLE from "../../assets/projectAuthor/blue-circle.svg";
-import PURPLE_CIRCLE from "../../assets/projectAuthor/purple-circle.svg";
+import ROSE_CIRCLE from "../../assets/projectAuthor/rose-circle.png";
+import GREEN_CIRCLE from "../../assets/projectAuthor/green-circle.png";
+import ORANGE_CIRCLE from "../../assets/projectAuthor/orange-circle.png";
+import YELLOW_CIRCLE from "../../assets/projectAuthor/yellow-circle.png";
+import BLUE_CIRCLE from "../../assets/projectAuthor/blue-circle.png";
+import PURPLE_CIRCLE from "../../assets/projectAuthor/purple-circle.png";
+import PERSON_1 from "../../assets/projectAuthor/person-1.svg"
 interface PartnersTypes {
   id: number;
   name: string;
@@ -21,6 +22,7 @@ interface WorkTeamTypes {
   name: string;
   position: string;
   img: string;
+  bgImg: string;
 }
 export interface ProjectTypes {
   id: number;
@@ -105,37 +107,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -177,37 +185,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -249,37 +263,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -321,37 +341,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -399,37 +425,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -471,37 +503,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -543,37 +581,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -615,37 +659,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -687,37 +737,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -759,31 +815,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -825,37 +893,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -897,31 +971,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -963,37 +1049,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [
@@ -1035,37 +1127,43 @@ export const projectsData = [
             id: 1,
             name: "Julie Barnes",
             position: "Project Manager",
-            img: ROSE_CIRCLE,
+            bgImg: ROSE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 2,
             name: "Den Brown",
             position: "Donor",
-            img: GREEN_CIRCLE,
+            bgImg: GREEN_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 3,
             name: "Anna Moore",
             position: "ambassador",
-            img: ORANGE_CIRCLE,
+            bgImg: ORANGE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 4,
             name: "Nicole McConaughey",
             position: "volunteer",
-            img: YELLOW_CIRCLE,
+            bgImg: YELLOW_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 5,
             name: "Jack Jackman",
             position: "expert",
-            img: BLUE_CIRCLE,
+            bgImg: BLUE_CIRCLE,
+            img: PERSON_1
           },
           {
             id: 6,
             name: "Den Farrell",
             position: "partner",
-            img: PURPLE_CIRCLE,
+            bgImg: PURPLE_CIRCLE,
+            img: PERSON_1
           },
         ],
         partners: [

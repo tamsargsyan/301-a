@@ -13,6 +13,8 @@ import DropDown from "../../components/Dropdown";
 import FullProjectInfo from "../FullProjectInfo";
 import "./index.css";
 import { useNavigate } from "react-router";
+import Footer from "../Footer";
+import ARROW_NEXT from "../../assets/arrow-next.svg";
 
 const items: MenuProps["items"] = [
   {
@@ -197,6 +199,20 @@ const OurProjects = () => {
             !!currentProjects?.length &&
             !loading && (
               <div className="pagination">
+                <Button
+                  text="Prev"
+                  link={false}
+                  to={""}
+                  icon={ARROW_NEXT}
+                  onClick={() => setCurrentPage(currentPage - 1)}
+                  style={{
+                    border: "1px solid #000",
+                    gap: "10px",
+                    fontWeight: "500",
+                  }}
+                  className="pagination_backBtn"
+                  disabled={currentPage === 1}
+                />
                 {totalPages.map((_, i) => (
                   <button
                     key={i}
@@ -208,12 +224,26 @@ const OurProjects = () => {
                     {i + 1}
                   </button>
                 ))}
+                <Button
+                  text="Next"
+                  link={false}
+                  to={""}
+                  icon={ARROW_NEXT}
+                  onClick={() => setCurrentPage(currentPage + 1)}
+                  style={{
+                    border: "1px solid #000",
+                    gap: "10px",
+                    fontWeight: "500",
+                  }}
+                  disabled={currentPage === totalPages.length}
+                />
               </div>
             )}
         </>
       ) : (
         <FullProjectInfo viewedProject={viewedProject} setIsView={setIsView} />
       )}
+      <Footer />
     </Background>
   );
 };
