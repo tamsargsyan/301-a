@@ -13,6 +13,7 @@ import Button from "../../components/Button";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Projects = () => {
+  const windowSize = useWindowSize();
   const projects = [
     {
       id: 1,
@@ -69,9 +70,9 @@ const Projects = () => {
   const carousel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    carousel.current &&
+    carousel.current && windowSize.width &&
       setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+  }, [windowSize.width]);
 
   const handleBack = () => {
     if (currentIndex > 0) {
@@ -84,7 +85,6 @@ const Projects = () => {
       setCurrentIndex(prevIndex => prevIndex + 1);
     }
   };
-  const windowSize = useWindowSize();
   return (
     <Background
       pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}

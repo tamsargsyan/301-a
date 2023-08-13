@@ -57,7 +57,6 @@ const Ecosystem = () => {
         {
           border: "1px solid #189387",
           padding: "15px 30px",
-          boxShadow: "-21px 16px 38px 0px rgba(197, 217, 45, 0.29)",
         },
       ],
     },
@@ -138,7 +137,6 @@ const Ecosystem = () => {
         {
           border: "1px solid #C12DD9",
           padding: "15px 30px",
-          boxShadow: "-21px 16px 38px 0px rgba(197, 217, 45, 0.29)",
         },
       ],
       partners: [

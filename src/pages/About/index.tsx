@@ -6,11 +6,12 @@ import type { MenuProps } from "antd";
 import DropDown from "../../components/Dropdown";
 
 const btnStyle = {
-  padding: "15px 30px",
   dropShadow: "-6px 6px 16px rgba(49, 58, 75, 0.11)",
   background: "#fff",
   border: "none",
   textTransform: "uppercase",
+  width: "300px",
+  height: "70px"
 };
 
 const items: MenuProps["items"] = [

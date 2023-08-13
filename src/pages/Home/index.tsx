@@ -63,12 +63,13 @@ const Home = () => {
   return (
     <div>
       <Main />
-      {sections.map(section => (
+      {sections.map((section) => (
         <div key={section.id}>
           <Background
             pattern1={section.pattern1}
             pattern2={section.pattern2}
-            pattern3={section.pattern3}>
+            pattern3={section.pattern3}
+          >
             <Header
               h1={section.h1}
               h2={section.h2}
@@ -77,7 +78,7 @@ const Home = () => {
               icon={section.icon}
             />
           </Background>
-          <div className='separatedPart'></div>
+          <div className="separatedPart"></div>
         </div>
       ))}
       <About />
