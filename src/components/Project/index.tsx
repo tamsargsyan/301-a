@@ -12,8 +12,6 @@ interface ProjectProps {
   heartit: () => void;
   isSaved: boolean;
   id: number;
-  setIsView: (arg: boolean) => void;
-  view: (arg: number) => void;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -26,8 +24,6 @@ const Project: React.FC<ProjectProps> = ({
   heartit,
   isSaved,
   id,
-  setIsView,
-  view,
 }) => {
   return (
     <div className='ourProject__project'>
@@ -59,10 +55,6 @@ const Project: React.FC<ProjectProps> = ({
               background: "#DD264E",
               color: "#fff",
               fontWeight: "500",
-            }}
-            onClick={() => {
-              setIsView(true);
-              view(id);
             }}
           />
           <button
