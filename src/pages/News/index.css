@@ -125,8 +125,14 @@
     transform: translate(-5%, -58%);
   }
   .newsBtn {
+    width: 60px;
+    height: 60px;
     display: block;
     z-index: 9999;
+  }
+  .newsBtn img {
+    width: 100%;
+    height: 100%;
   }
   .newsBtn.leftBtn {
     left: 10px;

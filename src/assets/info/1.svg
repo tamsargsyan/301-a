@@ -1,9 +1,10 @@
-<svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 5758">
-<circle id="Ellipse 27" cx="14.6849" cy="23.3177" r="5.14583" stroke="#DD264E" stroke-width="3"/>
-<circle id="Ellipse 28" cx="14.5" cy="23.5" r="13" stroke="#DD264E" stroke-width="3"/>
-<path id="Vector 39" d="M15 23L26 13" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector 40" d="M26 6V12.6458H33.25" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector 42" d="M30 2V8.64583H37.25" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-</g>
+<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5091 23.988C22.7308 23.988 25.3425 21.9791 25.3425 19.5009C25.3425 17.0227 22.7308 15.0137 19.5091 15.0137C16.2875 15.0137 13.6758 17.0227 13.6758 19.5009C13.6758 21.9791 16.2875 23.988 19.5091 23.988Z" stroke="#DD264E" stroke-width="3"/>
+<path d="M18.9141 2V5.58974" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M4.92578 3.79492L8.22562 6.33326" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M4.92578 35.052L8.22562 32.5137" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M32.7256 3.79492L29.4258 6.33326" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M32.7256 35.052L29.4258 32.5137" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M18.9141 33.4102V36.9999" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M37 19.5007C37 22.0856 35.2064 24.5236 32.0551 26.36C28.9026 28.197 24.4695 29.3725 19.5 29.3725C14.5305 29.3725 10.0974 28.197 6.94494 26.36C3.79367 24.5236 2 22.0856 2 19.5007C2 16.9158 3.79367 14.4778 6.94494 12.6414C10.0974 10.8044 14.5305 9.62891 19.5 9.62891C24.4695 9.62891 28.9026 10.8044 32.0551 12.6414C35.2064 14.4778 37 16.9158 37 19.5007Z" stroke="#DD264E" stroke-width="3"/>
 </svg>

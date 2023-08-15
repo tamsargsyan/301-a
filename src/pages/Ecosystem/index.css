@@ -11,8 +11,6 @@
   align-items: center;
   gap: 40px;
   justify-content: center;
-  margin-bottom: 100px;
-  margin-top: 100px;
 }
 .ecosystemContainer .innerCarousel {
   justify-content: center;
@@ -24,6 +22,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 .partner {
   border-radius: 10px;
@@ -57,9 +56,6 @@
   .ecosystemContainer {
     padding: 0;
   }
-  .ecosystemInner {
-    margin-bottom: 40px;
-  }
   .ecosystemInner .img {
     display: none;
   }
@@ -76,6 +72,8 @@
   }
   .innerPartners {
     justify-content: space-between;
-    padding: 20px;
+  }
+  .ecosystem {
+    margin: 60px 0;
   }
 }

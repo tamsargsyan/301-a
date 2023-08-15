@@ -48,23 +48,15 @@ h2 {
   gap: 20px;
   margin-top: 30px;
 }
-.ant-dropdown-open {
-  z-index: 9999;
-}
 .ant-dropdown-menu {
-  top: -35px;
+  top: -30px;
   padding-top: 40px !important;
   padding-bottom: 20px !important;
   border-bottom-left-radius: 45px !important;
   border-bottom-right-radius: 45px !important;
 }
-.ant-dropdown-menu-item {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-}
-.ant-dropdown-menu-item:last-child {
-  border-bottom-left-radius: 45px !important;
-  border-bottom-right-radius: 45px !important;
+.ant-dropdown-open {
+  z-index: 9999;
 }
 @media screen and (max-width: 975px) {
   .btns {
@@ -76,5 +68,15 @@ h2 {
   }
   .App {
     min-height: auto;
+  }
+  .headerContainer,
+  .innerPartners,
+  .newsBtns,
+  .footerContainer,
+  .slider .innerCarousel,
+  .aboutContainer,
+  .navbarContainer {
+    padding-left: clamp(1.5625rem, -0.0004rem + 7.8143vw, 2.93rem) !important;
+    padding-right: clamp(1.5625rem, -0.0004rem + 7.8143vw, 2.93rem) !important;
   }
 }

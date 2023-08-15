@@ -11,6 +11,7 @@ interface HeaderProps {
   btnStyles?: React.CSSProperties[];
   icon?: string;
   mainImg?: string;
+  className?: string;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -22,50 +23,56 @@ const Header: React.FC<HeaderProps> = ({
   style,
   btnStyles,
   mainImg,
+  className,
 }) => {
   const windowSize = useWindowSize();
   return (
-    <div className='headerContainer' style={style}>
-      {icon &&
-        (windowSize.width < 975 ? (
-          <div className={`${h2 && "iconTitleParagraph"} iconTitle`}>
-            <img src={icon} alt='Icon' />
-            <div className='header'>
-              <span>{h1}</span>
-              {h2 && <h2>{h2}</h2>}
+    <div className={`${className} headerContainer`} style={style}>
+      {windowSize.width < 975 ? (
+        <div className={`${h2 && "iconTitleParagraph"} iconTitle`}>
+          {icon && (
+            <div className="headerIconWrapper">
+              <img src={icon} alt="Icon" />
             </div>
+          )}
+          <div className="header">
+            <span>{h1}</span>
+            {h2 && <h2>{h2}</h2>}
           </div>
-        ) : (
-          <div className='icon'>
-            <img src={icon} alt='Icon' />
+        </div>
+      ) : (
+        icon && (
+          <div className="icon">
+            <img src={icon} alt="Icon" />
           </div>
-        ))}
-      <div className='headerContent'>
+        )
+      )}
+      <div className="headerContent">
         {windowSize.width > 975 && (
-          <div className='header'>
+          <div className="header">
             <h1>{h1}</h1>
             {h2 && <h2>{h2}</h2>}
           </div>
         )}
         {windowSize.width < 975 && mainImg && (
-          <div className='mainImgHeader'>
-            <img src={mainImg} alt='Main' />
+          <div className="mainImgHeader">
+            <img src={mainImg} alt="Main" />
           </div>
         )}
-        <div className='inner'>
+        <div className="inner">
           {p?.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
         {btns && (
-          <div className='btns'>
+          <div className="btns">
             {btns.map((btnText, index) => (
               <Button
                 key={index}
                 text={btnText}
                 style={btnStyles && btnStyles[index]}
                 link={true}
-                to=''
+                to=""
               />
             ))}
           </div>

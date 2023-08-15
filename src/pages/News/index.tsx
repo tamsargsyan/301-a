@@ -96,7 +96,7 @@ const News = () => {
         ))}
       </div>
       <div
-        className='btns'
+        className='btns newsBtns'
         style={{ margin: 0, padding: "0 20px", marginBottom: "40px" }}>
         <Button
           text='Все новости'

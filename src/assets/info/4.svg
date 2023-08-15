@@ -1,9 +1,7 @@
-<svg width="30" height="37" viewBox="0 0 30 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 5963">
-<path id="Vector 1080" d="M6.5 10H22.5" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector 1081" d="M7 17H14" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector 1082" d="M7 24H11" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector 1083" d="M16 24H23" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
-<path id="Rectangle 5063" d="M1.5 5C1.5 3.067 3.067 1.5 5 1.5H25C26.933 1.5 28.5 3.067 28.5 5V32C28.5 33.933 26.933 35.5 25 35.5H5C3.067 35.5 1.5 33.933 1.5 32V5Z" stroke="#DD264E" stroke-width="3"/>
-</g>
+<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.48047 10.75H29.2212" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M9.13281 17.9551H18.2069" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M9.13281 25.1602H14.318" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M20.7969 25.1602H29.8709" stroke="#DD264E" stroke-width="3" stroke-linecap="round"/>
+<path d="M2 5.60294C2 3.61309 4.0313 2 6.53704 2H32.463C34.9687 2 37 3.61309 37 5.60294V33.3971C37 35.3869 34.9687 37 32.463 37H6.53704C4.0313 37 2 35.3869 2 33.3971V5.60294Z" stroke="#DD264E" stroke-width="3"/>
 </svg>

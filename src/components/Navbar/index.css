@@ -48,7 +48,6 @@
   }
   .navbarContainer {
     justify-content: space-between;
-    padding: 20px 40px;
   }
   .hamburger {
     cursor: pointer;

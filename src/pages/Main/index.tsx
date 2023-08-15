@@ -24,19 +24,20 @@ const Main = () => {
       }}
       bigPatternStyle={{
         display: windowSize.width < 975 ? "none" : "block",
-      }}>
+      }}
+    >
       {windowSize.width < 975 && (
-        <div className='bgLogo'>
-          <img src={BIG_PATTERN} className='mainBigPattern' alt='Pattern' />
-          <img src={LOGO_MOBILE} alt='301' className='logoMobile' />
+        <div className="bgLogo">
+          <img src={BIG_PATTERN} className="mainBigPattern" alt="Pattern" />
+          <img src={LOGO_MOBILE} alt="301" className="logoMobile" />
         </div>
       )}
       <Header
-        h1='ЗЕМЛЯ МУДРОСТИ'
+        h1="ЗЕМЛЯ МУДРОСТИ"
         icon={""}
         p={[
           "Изменение сценария будущего Армении путем создания онтологической безопасности.",
-          "В центре нашего внимания Армения — земля многовековой культуры и мудрости, которой есть что предложить миру."
+          "В центре нашего внимания Армения — земля многовековой культуры и мудрости, которой есть что предложить миру.",
         ]}
         btns={["Стань одним из 301", "Весь проект"]}
         btnStyles={[
@@ -51,13 +52,14 @@ const Main = () => {
           },
         ]}
         style={{ padding: 0, width: "40vw" }}
+        className="mainPageHeader"
       />
       {windowSize.width > 975 && (
-        <div className='bgLogo'>
-          <img src={LOGO} alt='301' />
+        <div className="bgLogo">
+          <img src={LOGO} alt="301" />
         </div>
       )}
-      <FollowUs className='mainFollowUs' />
+      <FollowUs className="mainFollowUs" />
     </Background>
   );
 };

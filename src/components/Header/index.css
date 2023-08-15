@@ -27,6 +27,10 @@
   font-size: clamp(1.125rem, 0rem + 0.9375vw, 3.375rem);
   text-align: justify;
 }
+.mainImgHeader {
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 1920px) {
   .headerContainer {
     padding: 0 clamp(18.229375rem, 0.0013rem + 18.2281vw, 21.875rem);
@@ -100,12 +104,6 @@
 @media screen and (max-width: 975px) {
   .headerContainer {
     width: 100% !important;
-    padding: 20px !important;
-  }
-  .mainImgHeader,
-  .mainImgHeader img {
-    height: 100%;
-    width: 100%;
   }
   .headerContainer {
     flex-direction: column;
@@ -115,7 +113,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 8px;
   }
   .iconTitleParagraph {
     align-items: flex-start;
@@ -123,16 +121,17 @@
   .ecosystemContainer .iconTitle {
     margin-bottom: 30px;
   }
-  .iconTitle img {
-    padding-top: 5px;
-    width: 40px;
-    height: 40px;
+  .headerIconWrapper {
+    width: 30px;
+    height: 30px;
+  }
+  .headerIconWrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .inner {
     font-size: 17px;
-  }
-  .header {
-    font-size: 18px;
   }
   .header h2 {
     font-size: 16px;
@@ -142,5 +141,19 @@
   }
   .headerContent {
     margin: auto;
+  }
+  .header {
+    font-size: clamp(1.125rem, 0rem + 5.625vw, 2.109375rem);
+  }
+  .mainPageHeader .header {
+    font-size: clamp(1.625rem, 0rem + 8.125vw, 3.046875rem);
+    color: #151c26;
+  }
+}
+@media screen and (max-width: 500px) {
+  .mainImgHeader,
+  .mainImgHeader img {
+    height: 100%;
+    width: 100%;
   }
 }

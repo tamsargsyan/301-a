@@ -103,7 +103,6 @@
   .slider .innerCarousel {
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px;
   }
   .projectImg {
     width: 100%;
