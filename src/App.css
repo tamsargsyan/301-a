@@ -42,6 +42,7 @@ h2 {
 .separatedPart {
   height: 50px;
   width: 100%;
+  background-color: rgba(21, 28, 38, 0.03);
 }
 .btns {
   display: flex;

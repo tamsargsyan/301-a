@@ -12,6 +12,7 @@ interface HeaderProps {
   icon?: string;
   mainImg?: string;
   className?: string;
+  isEcosystem?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -24,6 +25,7 @@ const Header: React.FC<HeaderProps> = ({
   btnStyles,
   mainImg,
   className,
+  isEcosystem,
 }) => {
   const windowSize = useWindowSize();
   return (
@@ -41,7 +43,8 @@ const Header: React.FC<HeaderProps> = ({
           </div>
         </div>
       ) : (
-        icon && (
+        icon &&
+        !isEcosystem && (
           <div className="icon">
             <img src={icon} alt="Icon" />
           </div>
@@ -49,7 +52,12 @@ const Header: React.FC<HeaderProps> = ({
       )}
       <div className="headerContent">
         {windowSize.width > 975 && (
-          <div className="header">
+          <div className={`${isEcosystem && "header_ecosystem"} header`}>
+            {isEcosystem && (
+              <div className="ecosystemImg">
+                <img src={icon} alt="Ecosystem" />
+              </div>
+            )}
             <h1>{h1}</h1>
             {h2 && <h2>{h2}</h2>}
           </div>

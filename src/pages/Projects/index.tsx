@@ -70,60 +70,64 @@ const Projects = () => {
   const carousel = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    carousel.current && windowSize.width &&
+    carousel.current &&
+      windowSize.width &&
       setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, [windowSize.width]);
 
   const handleBack = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(prevIndex => prevIndex - 1);
+      setCurrentIndex((prevIndex) => prevIndex - 1);
     }
   };
 
   const handleNext = () => {
     if (currentIndex < 1) {
-      setCurrentIndex(prevIndex => prevIndex + 1);
+      setCurrentIndex((prevIndex) => prevIndex + 1);
     }
   };
   return (
     <Background
       pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
-      pattern2={SMALL_PATTERN_1}>
-      <div className='projectsContainer' id='projects'>
+      pattern2={SMALL_PATTERN_1}
+      shoudHaveSidePattern={false}
+    >
+      <div className="projectsContainer" id="projects">
         <Header
-          h1='НАШИ ПРОЕКТЫ'
+          h1="НАШИ ПРОЕКТЫ"
           p={[
             "За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. ",
           ]}
           icon={ICON}
         />
-        <div className='slider'>
-          <button className='leftBtn' onClick={handleBack}>
-            <img src={ARROW} alt='Arrow' />
+        <div className="slider">
+          <button className="leftBtn" onClick={handleBack}>
+            <img src={ARROW} alt="Arrow" />
           </button>
-          <button className='rightBtn' onClick={handleNext}>
-            <img src={ARROW} alt='Arrow' />
+          <button className="rightBtn" onClick={handleNext}>
+            <img src={ARROW} alt="Arrow" />
           </button>
-          <motion.div ref={carousel} className='carousel'>
+          <motion.div ref={carousel} className="carousel">
             <motion.div
-              className='innerCarousel'
-              drag='x'
+              className="innerCarousel"
+              drag="x"
               dragConstraints={{ right: 0, left: -width }}
               initial={{ x: 0 }}
               animate={{
                 x: -width * currentIndex,
-              }}>
-              {projects.map(project => {
+              }}
+            >
+              {projects.map((project) => {
                 return (
-                  <motion.div className='project' key={project.id}>
-                    <div className='projectImg'></div>
-                    <div className='projectInfo'>
+                  <motion.div className="project" key={project.id}>
+                    <div className="projectImg"></div>
+                    <div className="projectInfo">
                       <h1>{project.name}</h1>
                       <span>{project.culture}</span>
-                      <div className='author'>
+                      <div className="author">
                         <span>{project.author}</span>
-                        <span className='flag'>
-                          <img src={FLAG} alt='Flag' />
+                        <span className="flag">
+                          <img src={FLAG} alt="Flag" />
                           {project.flag}
                         </span>
                       </div>
@@ -134,9 +138,9 @@ const Projects = () => {
             </motion.div>
           </motion.div>
         </div>
-        <div className='btns'>
+        <div className="btns">
           <Button
-            text='Другие проекты'
+            text="Другие проекты"
             style={{
               padding: "10px 70px",
               background: "#DD264E",
@@ -144,7 +148,7 @@ const Projects = () => {
               color: "#fff",
             }}
             link={true}
-            to='/projects'
+            to="/projects"
           />
         </div>
       </div>

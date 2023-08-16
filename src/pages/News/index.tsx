@@ -61,13 +61,13 @@ const News = () => {
       pattern2RightStyle={{
         display: "none",
       }}
-      style={{ flexDirection: "column", paddingTop: "35px" }}>
+      style={{ flexDirection: "column" }}>
       <Header
         h1='Новости "301"'
         icon={HeaderIcon}
         style={{
           boxShadow: "0px 0px 16px rgba(49, 58, 75, 0.11)",
-          paddingTop: "100px",
+          paddingTop: "50px",
           paddingBottom: "40px",
         }}
       />

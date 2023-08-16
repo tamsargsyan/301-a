@@ -18,7 +18,10 @@ import ROSGOSTRAKH from "../../assets/info/rostgostrakh.svg";
 import BETCONSTRUCT from "../../assets/info/betconstruct.png";
 import DIGITAIN from "../../assets/info/digitain.png";
 import Background from "../../components/Background";
+import SIDE_PATTERN_2 from "../../assets/patterns/side-2.svg";
+import SIDE_PATTERN_2_MOBILE from "../../assets/patterns/side-2-mobile.svg";
 import "./index.css";
+import { useWindowSize } from "../../hooks/useWindowSize";
 
 const Ecosystem = () => {
   const data = [
@@ -178,20 +181,29 @@ const Ecosystem = () => {
       ],
     },
   ];
-
+  const windowSize = useWindowSize();
   return (
-    <Background style={{ flexDirection: "column" }}>
+    <Background
+      style={{
+        flexDirection: "column",
+      }}
+      pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
+      shoudHaveSidePattern={false}
+    >
       <Header
-        h1='НАША ЭКОСИСТЕМА'
+        h1="НАША ЭКОСИСТЕМА"
         p={[
           "Мы видим два основный пути развития: с одной стороны — мудрое использовании потенциала, знаний и накопленного культурно-исторического опыта армянского народа; с другой — привлечение нестандартно мыслящих людей, как из Армении, так и из других стран, способных по-новому взглянуть на сложившуюся картину мира.Поэтому мы интегрируем в свою экосистему всех, кто готов вместе с нами строить благополучное будущее Армении.",
         ]}
         icon={EcosystemIcon}
+        style={{
+          paddingTop: "50px",
+        }}
       />
-      <div className='ecosystemContainer'>
-        {data.map(data => (
-          <div className='ecosystem' key={data.id}>
-            <div className='ecosystemInner'>
+      <div className="ecosystemContainer">
+        {data.map((data) => (
+          <div className="ecosystem" key={data.id}>
+            <div className="ecosystemInner">
               <Header
                 h1={data.headerName}
                 p={data.p}
@@ -200,16 +212,17 @@ const Ecosystem = () => {
                 btnStyles={data.btnStyle}
                 style={{ padding: 0 }}
                 mainImg={data.mainImg}
+                isEcosystem={true}
               />
-              <div className='img'>
-                <img src={data.mainImg} alt='Icon' />
+              <div className="img">
+                <img src={data.mainImg} alt="Icon" />
               </div>
             </div>
             {data.partners && (
-              <div className='partners'>
-                <div className='innerPartners'>
-                  {data.partners.map(partner => (
-                    <div className='partner' key={partner.id}>
+              <div className="partners">
+                <div className="innerPartners">
+                  {data.partners.map((partner) => (
+                    <div className="partner" key={partner.id}>
                       <img src={partner.img} alt={partner.name} />
                     </div>
                   ))}

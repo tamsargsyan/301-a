@@ -24,12 +24,16 @@ textArea::placeholder {
   font-size: 20px;
 }
 .form {
-  border-radius: 10px;
+  border-radius: 46px;
   border: 2px solid rgba(0, 0, 0, 0.14);
   box-shadow: -20px 8px 20px 0px rgba(21, 29, 39, 0.06);
   padding: 20px;
   outline: none;
   color: #303030;
+  font-family: Montserrat;
+}
+textarea.form {
+  border-radius: 10px;
 }
 .formGroup {
   display: flex;

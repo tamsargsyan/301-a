@@ -16,6 +16,7 @@ import BIG_PATTERN_3 from "../../assets/patterns/big-3.svg";
 import ICON_1 from "../../assets/info/1.svg";
 import ICON_2 from "../../assets/info/2.svg";
 import ICON_3 from "../../assets/info/3.svg";
+import { Fragment } from "react";
 
 const Home = () => {
   const windowSize = useWindowSize();
@@ -29,9 +30,10 @@ const Home = () => {
       ],
       btn: ["Узнать больше"],
       icon: ICON_1,
-      pattern1: windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2,
+      pattern1: undefined,
       pattern2: SMALL_PATTERN_2,
       pattern3: BIG_PATTERN_2,
+      shoudHaveSidePattern: false,
     },
     {
       id: 2,
@@ -45,6 +47,7 @@ const Home = () => {
       pattern1: windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2,
       pattern2: SMALL_PATTERN_2,
       pattern3: BIG_PATTERN_3,
+      shoudHaveSidePattern: false,
     },
     {
       id: 3,
@@ -55,20 +58,22 @@ const Home = () => {
       ],
       btn: undefined,
       icon: ICON_3,
-      pattern1: undefined,
+      pattern1: windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2,
       pattern2: undefined,
       pattern3: undefined,
+      shoudHaveSidePattern: false,
     },
   ];
   return (
-    <div>
+    <>
       <Main />
       {sections.map((section) => (
-        <div key={section.id}>
+        <Fragment key={section.id}>
           <Background
             pattern1={section.pattern1}
             pattern2={section.pattern2}
             pattern3={section.pattern3}
+            shoudHaveSidePattern={section.shoudHaveSidePattern}
           >
             <Header
               h1={section.h1}
@@ -79,7 +84,7 @@ const Home = () => {
             />
           </Background>
           <div className="separatedPart"></div>
-        </div>
+        </Fragment>
       ))}
       <About />
       <Projects />
@@ -87,7 +92,7 @@ const Home = () => {
       <News />
       <Contact />
       <Footer />
-    </div>
+    </>
   );
 };
 
