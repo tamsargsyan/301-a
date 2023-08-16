@@ -1,9 +1,6 @@
 .bgContainer {
   position: relative;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .pattern1,
@@ -45,20 +42,19 @@
 .sidePattern1,
 .sidePattern2 {
   width: 100%;
-  position: absolute;
-  left: 0;
 }
 .sidePattern1 img,
 .sidePattern2 img {
   width: 100%;
 }
-.sidePattern1 {
-  top: 0;
-}
-
 .sidePattern2 {
-  bottom: 0;
   transform: rotate(180deg);
+}
+.bgContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
 }
 @media screen and (max-width: 1600px) {
   .bigPattern {

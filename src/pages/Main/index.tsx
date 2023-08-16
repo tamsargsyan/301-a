@@ -17,11 +17,6 @@ const Main = () => {
       pattern1={windowSize.width < 975 ? SIDE_PATTERN_MOBILE : SIDE_PATTERN}
       pattern2={SMALL_PATTERN}
       pattern3={BIG_PATTERN}
-      style={{
-        marginBottom: "50px",
-        flexDirection: windowSize.width < 975 ? "column" : "row",
-        padding: "70px 0",
-      }}
       bigPatternStyle={{
         display: windowSize.width < 975 ? "none" : "block",
       }}

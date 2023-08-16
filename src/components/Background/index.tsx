@@ -27,47 +27,39 @@ const Background: React.FC<BgProps> = ({
   bigPatternStyle,
   sidePatter1Style,
   sidePatter2Style,
-  shoudHaveSidePattern
+  shoudHaveSidePattern,
 }) => {
   const windowSize = useWindowSize();
   return (
-    <div
-      className='bgContainer'
-      style={{
-        padding:
-          pattern1 && pattern2 && pattern3
-            ? windowSize.width < 975
-              ? "100px 0"
-              : "150px 0"
-            : "40px 0",
-        ...style,
-      }}>
+    <div className="bgContainer">
       {pattern1 && (
-        <div className='sidePattern1' style={sidePatter1Style}>
-          <img src={pattern1} alt='Pattern' />
+        <div className="sidePattern1" style={sidePatter1Style}>
+          <img src={pattern1} alt="Pattern" />
         </div>
       )}
       {pattern2 && (
-        <div className='pattern1' style={pattern2LeftStyle}>
-          <img src={pattern2} alt='Pattern' />
+        <div className="pattern1" style={pattern2LeftStyle}>
+          <img src={pattern2} alt="Pattern" />
         </div>
       )}
       {pattern3 && (
-        <div className='bigPattern' style={bigPatternStyle}>
-          <img src={pattern3} alt='Pattern' />
+        <div className="bigPattern" style={bigPatternStyle}>
+          <img src={pattern3} alt="Pattern" />
         </div>
       )}
       {pattern2 && (
-        <div className='pattern2' style={pattern2RightStyle}>
-          <img src={pattern2} alt='Pattern' />
+        <div className="pattern2" style={pattern2RightStyle}>
+          <img src={pattern2} alt="Pattern" />
         </div>
       )}
+      <div className="bgContent" style={style}>
+        {children}
+      </div>
       {pattern1 && shoudHaveSidePattern && (
-        <div className='sidePattern2' style={sidePatter2Style}>
-          <img src={pattern1} alt='Pattern' />
+        <div className="sidePattern2" style={sidePatter2Style}>
+          <img src={pattern1} alt="Pattern" />
         </div>
       )}
-      {children}
     </div>
   );
 };

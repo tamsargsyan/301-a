@@ -69,6 +69,7 @@ const Home = () => {
       <Main />
       {sections.map((section) => (
         <Fragment key={section.id}>
+          <div className="separatedPart"></div>
           <Background
             pattern1={section.pattern1}
             pattern2={section.pattern2}
@@ -83,7 +84,6 @@ const Home = () => {
               icon={section.icon}
             />
           </Background>
-          <div className="separatedPart"></div>
         </Fragment>
       ))}
       <About />

@@ -184,11 +184,9 @@ const Ecosystem = () => {
   const windowSize = useWindowSize();
   return (
     <Background
-      style={{
-        flexDirection: "column",
-      }}
       pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
       shoudHaveSidePattern={false}
+      style={{ flexDirection: "column" }}
     >
       <Header
         h1="НАША ЭКОСИСТЕМА"
@@ -196,9 +194,6 @@ const Ecosystem = () => {
           "Мы видим два основный пути развития: с одной стороны — мудрое использовании потенциала, знаний и накопленного культурно-исторического опыта армянского народа; с другой — привлечение нестандартно мыслящих людей, как из Армении, так и из других стран, способных по-новому взглянуть на сложившуюся картину мира.Поэтому мы интегрируем в свою экосистему всех, кто готов вместе с нами строить благополучное будущее Армении.",
         ]}
         icon={EcosystemIcon}
-        style={{
-          paddingTop: "50px",
-        }}
       />
       <div className="ecosystemContainer">
         {data.map((data) => (

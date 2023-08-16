@@ -87,72 +87,77 @@ const Projects = () => {
     }
   };
   return (
-    <Background
-      pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
-      pattern2={SMALL_PATTERN_1}
-      shoudHaveSidePattern={false}
-    >
-      <div className="projectsContainer" id="projects">
-        <Header
-          h1="НАШИ ПРОЕКТЫ"
-          p={[
-            "За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. ",
-          ]}
-          icon={ICON}
-        />
-        <div className="slider">
-          <button className="leftBtn" onClick={handleBack}>
-            <img src={ARROW} alt="Arrow" />
-          </button>
-          <button className="rightBtn" onClick={handleNext}>
-            <img src={ARROW} alt="Arrow" />
-          </button>
-          <motion.div ref={carousel} className="carousel">
-            <motion.div
-              className="innerCarousel"
-              drag="x"
-              dragConstraints={{ right: 0, left: -width }}
-              initial={{ x: 0 }}
-              animate={{
-                x: -width * currentIndex,
-              }}
-            >
-              {projects.map((project) => {
-                return (
-                  <motion.div className="project" key={project.id}>
-                    <div className="projectImg"></div>
-                    <div className="projectInfo">
-                      <h1>{project.name}</h1>
-                      <span>{project.culture}</span>
-                      <div className="author">
-                        <span>{project.author}</span>
-                        <span className="flag">
-                          <img src={FLAG} alt="Flag" />
-                          {project.flag}
-                        </span>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </motion.div>
-          </motion.div>
-        </div>
-        <div className="btns">
-          <Button
-            text="Другие проекты"
-            style={{
-              padding: "10px 70px",
-              background: "#DD264E",
-              boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
-              color: "#fff",
-            }}
-            link={true}
-            to="/projects"
+    <>
+      <div className="separatedPart"></div>
+      <Background
+        pattern1={
+          windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2
+        }
+        pattern2={SMALL_PATTERN_1}
+        shoudHaveSidePattern={false}
+      >
+        <div className="projectsContainer" id="projects">
+          <Header
+            h1="НАШИ ПРОЕКТЫ"
+            p={[
+              "За несколько лет работы фонда «301. Земля мудрости» мы запустили ряд важных проектов по направлениям образования, культуры, науки и инноваций и целостного развития территории. ",
+            ]}
+            icon={ICON}
           />
+          <div className="slider">
+            <button className="leftBtn" onClick={handleBack}>
+              <img src={ARROW} alt="Arrow" />
+            </button>
+            <button className="rightBtn" onClick={handleNext}>
+              <img src={ARROW} alt="Arrow" />
+            </button>
+            <motion.div ref={carousel} className="carousel">
+              <motion.div
+                className="innerCarousel"
+                drag="x"
+                dragConstraints={{ right: 0, left: -width }}
+                initial={{ x: 0 }}
+                animate={{
+                  x: -width * currentIndex,
+                }}
+              >
+                {projects.map((project) => {
+                  return (
+                    <motion.div className="project" key={project.id}>
+                      <div className="projectImg"></div>
+                      <div className="projectInfo">
+                        <h1>{project.name}</h1>
+                        <span>{project.culture}</span>
+                        <div className="author">
+                          <span>{project.author}</span>
+                          <span className="flag">
+                            <img src={FLAG} alt="Flag" />
+                            {project.flag}
+                          </span>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+            </motion.div>
+          </div>
+          <div className="btns">
+            <Button
+              text="Другие проекты"
+              style={{
+                padding: "10px 70px",
+                background: "#DD264E",
+                boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",
+                color: "#fff",
+              }}
+              link={true}
+              to="/projects"
+            />
+          </div>
         </div>
-      </div>
-    </Background>
+      </Background>
+    </>
   );
 };
 

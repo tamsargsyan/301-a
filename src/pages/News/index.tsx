@@ -42,11 +42,11 @@ const News = () => {
   ];
   const [activeNews, setActiveNews] = useState(2);
   const handleBack = () => {
-    activeNews > 1 && setActiveNews(prevIndex => prevIndex - 1);
+    activeNews > 1 && setActiveNews((prevIndex) => prevIndex - 1);
   };
 
   const handleNext = () => {
-    activeNews < 3 && setActiveNews(prevIndex => prevIndex + 1);
+    activeNews < 3 && setActiveNews((prevIndex) => prevIndex + 1);
   };
   const windowSize = useWindowSize();
   return (
@@ -61,33 +61,35 @@ const News = () => {
       pattern2RightStyle={{
         display: "none",
       }}
-      style={{ flexDirection: "column" }}>
+      style={{ flexDirection: "column", padding: "0" }}
+    >
       <Header
         h1='Новости "301"'
         icon={HeaderIcon}
         style={{
           boxShadow: "0px 0px 16px rgba(49, 58, 75, 0.11)",
-          paddingTop: "50px",
+          paddingTop: "40px",
           paddingBottom: "40px",
         }}
       />
-      <button className='leftBtn newsBtn' onClick={handleBack}>
-        <img src={ARROW} alt='Arrow' />
+      <button className="leftBtn newsBtn" onClick={handleBack}>
+        <img src={ARROW} alt="Arrow" />
       </button>
-      <button className='rightBtn newsBtn' onClick={handleNext}>
-        <img src={ARROW} alt='Arrow' />
+      <button className="rightBtn newsBtn" onClick={handleNext}>
+        <img src={ARROW} alt="Arrow" />
       </button>
-      <div className='newsContainer'>
-        {news.map(item => (
+      <div className="newsContainer">
+        {news.map((item) => (
           <div
             className={`${activeNews === item.id && "activeNews"} ${
               activeNews === 1 && item.id === 2 && "activeNews1"
             } ${activeNews === 3 && item.id === 2 && "activeNews2"} news`}
-            key={item.id}>
-            <div className='newsImg'>
+            key={item.id}
+          >
+            <div className="newsImg">
               <img src={item.img} alt={item.title} />
             </div>
-            <div className='newsContent'>
+            <div className="newsContent">
               <h1>{item.title}</h1>
               <p>{item.content}</p>
               <p>{item.date}</p>
@@ -96,10 +98,11 @@ const News = () => {
         ))}
       </div>
       <div
-        className='btns newsBtns'
-        style={{ margin: 0, padding: "0 20px", marginBottom: "40px" }}>
+        className="btns newsBtns"
+        style={{ margin: 0, padding: "0 20px", marginBottom: "40px" }}
+      >
         <Button
-          text='Все новости'
+          text="Все новости"
           style={{
             color: "#DD264E",
             boxShadow: "-21px 16px 38px 0px rgba(191, 9, 48, 0.21)",

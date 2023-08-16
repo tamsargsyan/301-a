@@ -31,7 +31,6 @@ const Contact = () => {
   const windowSize = useWindowSize();
   return (
     <Background
-      style={{ flexDirection: "column" }}
       pattern1={windowSize.width < 975 ? SIDE_PATTERN_2_MOBILE : SIDE_PATTERN_2}
       shoudHaveSidePattern={false}
       pattern2={PATTERN_2}
@@ -41,13 +40,14 @@ const Contact = () => {
         height: "190px",
         top: "480px",
       }}
+      style={{ flexDirection: "column", padding: "0" }}
     >
       <Header
         h1="Напишите нам"
         icon={EMAIL}
         style={{
           boxShadow: "0px 0px 16px rgba(49, 58, 75, 0.11)",
-          paddingTop: "50px",
+          paddingTop: "40px",
           paddingBottom: "40px",
         }}
       />
