@@ -25,6 +25,7 @@ const Main = () => {
       bigPatternStyle={{
         display: windowSize.width < 975 ? "none" : "block",
       }}
+      shoudHaveSidePattern={true}
     >
       {windowSize.width < 975 && (
         <div className="bgLogo">
