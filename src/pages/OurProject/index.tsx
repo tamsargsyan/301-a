@@ -118,6 +118,7 @@ const OurProjects = () => {
     <Background
       pattern1={windowSize.width < 800 ? PATTERN_MOBILE : PATTERN}
       sidePatter2Style={{ display: "none" }}
+      style={{ flexDirection: "column", padding: "0" }}
     >
       <div className="filteringWrapper">
         <Header

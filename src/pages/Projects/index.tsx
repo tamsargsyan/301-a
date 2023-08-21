@@ -111,23 +111,46 @@ const Projects = () => {
             <button className="rightBtn" onClick={handleNext}>
               <img src={ARROW} alt="Arrow" />
             </button>
-            <motion.div ref={carousel} className="carousel">
-              <motion.div
-                className="innerCarousel"
-                drag="x"
-                dragConstraints={{ right: 0, left: -width }}
-                initial={{ x: 0 }}
-                animate={{
-                  x: -width * currentIndex,
-                }}
-              >
+            {windowSize.width > 975 ? (
+              <motion.div ref={carousel} className="carousel">
+                <motion.div
+                  className="innerCarousel"
+                  drag="x"
+                  dragConstraints={{ right: 0, left: -width }}
+                  initial={{ x: 0 }}
+                  animate={{
+                    x: -width * currentIndex,
+                  }}
+                >
+                  {projects.map((project) => {
+                    return (
+                      <motion.div className="project" key={project.id}>
+                        <div className="projectImg"></div>
+                        <div className="projectInfo">
+                          <h1>{project.name}</h1>
+                          <span>{project.culture}</span>
+                          <div className="author">
+                            <span>{project.author}</span>
+                            <span className="flag">
+                              <img src={FLAG} alt="Flag" />
+                              {project.flag}
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </motion.div>
+              </motion.div>
+            ) : (
+              <div className="innerCarousel">
                 {projects.map((project) => {
                   return (
-                    <motion.div className="project" key={project.id}>
+                    <div className="project" key={project.id}>
                       <div className="projectImg"></div>
                       <div className="projectInfo">
                         <h1>{project.name}</h1>
-                        <span>{project.culture}</span>
+                        <span className="culture">{project.culture}</span>
                         <div className="author">
                           <span>{project.author}</span>
                           <span className="flag">
@@ -136,11 +159,11 @@ const Projects = () => {
                           </span>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   );
                 })}
-              </motion.div>
-            </motion.div>
+              </div>
+            )}
           </div>
           <div className="btns">
             <Button

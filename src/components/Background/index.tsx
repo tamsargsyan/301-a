@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import "./index.css";
-import { useWindowSize } from "../../hooks/useWindowSize";
 
 interface BgProps {
   children: ReactNode;
@@ -29,7 +28,6 @@ const Background: React.FC<BgProps> = ({
   sidePatter2Style,
   shoudHaveSidePattern,
 }) => {
-  const windowSize = useWindowSize();
   return (
     <div className="bgContainer">
       {pattern1 && (

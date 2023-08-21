@@ -128,8 +128,16 @@
     width: 80vw;
     left: 100%;
   }
+  .openedMobileMenu .sidePattern1,
+  .openedMobileMenu .sidePattern2 {
+    position: absolute;
+    left: 0;
+  }
   .openedMobileMenu .sidePattern1 {
     top: 85px;
+  }
+  .openedMobileMenu .sidePattern2  {
+    bottom: 0;
   }
 }
 

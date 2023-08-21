@@ -21,6 +21,7 @@ const Main = () => {
         display: windowSize.width < 975 ? "none" : "block",
       }}
       shoudHaveSidePattern={true}
+      style={{ flexDirection: windowSize.width < 975 ? "column" : "row" }}
     >
       {windowSize.width < 975 && (
         <div className="bgLogo">

@@ -10,6 +10,7 @@ import COLLECTED from "../../assets/projectAuthor/collected.svg";
 import REMAINING from "../../assets/projectAuthor/remaining.svg";
 import HEART from "../../assets/projectAuthor/heart.svg";
 import "./index.css";
+import RevolveText from "../../components/Revolve";
 
 interface Props {
   viewedProject: ProjectTypes | undefined;
@@ -230,6 +231,13 @@ const FullProjectInfo: React.FC<Props> = ({ viewedProject, setIsView }) => {
                         alt="Team Member"
                         className="teamMember_img"
                       />
+                      <RevolveText
+                        span={50}
+                        north={0}
+                        spiral={false}
+                        size={200}
+                        text={team.position}
+                      />
                     </div>
                     <p className="member_name">{team.name}</p>
                   </div>
@@ -248,6 +256,13 @@ const FullProjectInfo: React.FC<Props> = ({ viewedProject, setIsView }) => {
                         src={team.img}
                         alt="Team Member"
                         className="teamMember_img"
+                      />
+                      <RevolveText
+                        span={50}
+                        north={0}
+                        spiral={false}
+                        size={200}
+                        text={team.position}
                       />
                     </div>
                     <p className="member_name">{team.name}</p>
